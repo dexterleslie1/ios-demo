@@ -10,6 +10,7 @@
 #import "AppDelegate.h"
 #import "Student+CoreDataClass.h"
 #import "Book+CoreDataClass.h"
+#import "StudentStorageManager.h"
 
 @interface studentAndBookCoreDataTests : XCTestCase
 
@@ -53,19 +54,8 @@
 }
 
 - (void) testFetchStudent {
-    NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName: @"Student"];
-    NSArray * students = [_context executeFetchRequest: request error: nil];
-    if(students.count > 0) {
-        for(Student * student in students) {
-            NSLog(@"Student [name=%@,age=%d]", student.name, student.age);
-            NSSet * books = student.books;
-            for(Book * book in books) {
-                NSLog(@"Book [title=%@,price=%f]", book.title, book.price);
-            }
-        }
-    }else {
-        NSLog(@"No students found");
-    }
+    [[StudentStorageManager sharedInstance] fetchAndDisplay];
+    [[StudentStorageManager sharedInstance] fetchAndDisplay];
 }
 
 - (void)testPerformanceExample {
