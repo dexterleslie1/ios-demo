@@ -20,7 +20,8 @@
     dispatch_once(&onceToken, ^{
         manager = [[self alloc] init];
         AppDelegate * appDelegate = [UIApplication sharedApplication].delegate;
-        manager.context = appDelegate.persistentContainer.viewContext;
+        NSManagedObjectContext *context = appDelegate.persistentContainer.viewContext;
+        manager.context = context;
     });
     
     return manager;
