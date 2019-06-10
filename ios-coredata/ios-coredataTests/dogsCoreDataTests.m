@@ -10,15 +10,19 @@
 #import "AppDelegate.h"
 #import "Dog+CoreDataClass.h"
 
-@interface ios_coredataTests : XCTestCase
+@interface dogsCoreDataTests : XCTestCase
+
+@property (nonatomic, strong) NSManagedObjectContext * context;
 
 @end
 
-@implementation ios_coredataTests
+@implementation dogsCoreDataTests
 
 - (void)setUp {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    AppDelegate * appDelegate = [UIApplication sharedApplication].delegate;
+    _context = appDelegate.persistentContainer.viewContext;
 }
 
 - (void)tearDown {
@@ -29,38 +33,35 @@
 - (void)testInsert {
     // This is an example of a functional test case.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-    Dog *dog = [NSEntityDescription insertNewObjectForEntityForName:@"Dog" inManagedObjectContext: app.persistentContainer.viewContext];
+    Dog *dog = [NSEntityDescription insertNewObjectForEntityForName:@"Dog" inManagedObjectContext: _context];
     dog.name = @"Dog111";
     dog.sex = @"公";
     dog.age = 100;
-    [app saveContext];
+    [_context save:nil];
 }
 
 - (void) testFetch {
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-    NSEntityDescription * entity = [NSEntityDescription entityForName:@"Dog" inManagedObjectContext:app.persistentContainer.viewContext];
+    NSEntityDescription * entity = [NSEntityDescription entityForName:@"Dog" inManagedObjectContext:_context];
     NSFetchRequest * request = [[NSFetchRequest alloc] init];
     [request setEntity: entity];
-    NSArray * array = [app.persistentContainer.viewContext executeFetchRequest:request error:nil];
+    NSArray * array = [_context executeFetchRequest:request error:nil];
     for(Dog * dog in array){
         NSLog(@"Dog [name=%@, sex=%@]", dog.name, dog.sex);
     }
 }
 
 - (void) testFetchByPredicate {
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-    NSEntityDescription * entity = [NSEntityDescription entityForName:@"Dog" inManagedObjectContext:app.persistentContainer.viewContext];
+    NSEntityDescription * entity = [NSEntityDescription entityForName:@"Dog" inManagedObjectContext:_context];
     
     NSPredicate * predicate = [NSPredicate predicateWithFormat: @"name=%@", @"Dog111"];
     
     NSFetchRequest * request = [[NSFetchRequest alloc] init];
     [request setEntity: entity];
     [request setPredicate: predicate];
-    NSArray * dogs = [app.persistentContainer.viewContext executeFetchRequest:request error:nil];
+    NSArray * dogs = [_context executeFetchRequest:request error:nil];
     if(dogs.count > 0){
         for(Dog * dog in dogs){
-            NSLog(@"Dog name:%@", dog.name);
+            NSLog(@"Dog [name=%@, sex=%@]", dog.name, dog.sex);
         }
     }else{
         NSLog(@"No dog found");
@@ -69,8 +70,7 @@
 }
 
 - (void) testUpdate {
-    AppDelegate * app = [UIApplication sharedApplication].delegate;
-    NSEntityDescription * entity = [NSEntityDescription entityForName: @"Dog" inManagedObjectContext: app.persistentContainer.viewContext];
+    NSEntityDescription * entity = [NSEntityDescription entityForName: @"Dog" inManagedObjectContext: _context];
     
     NSPredicate * predicate = [NSPredicate predicateWithFormat: @"name=%@", @"Dog111"];
     
@@ -78,13 +78,13 @@
     [request setEntity: entity];
     [request setPredicate: predicate];
     
-    NSArray * dogs = [app.persistentContainer.viewContext executeFetchRequest:request error:nil];
+    NSArray * dogs = [_context executeFetchRequest:request error:nil];
     if(dogs.count > 0){
         for(Dog * dog in dogs) {
             dog.sex = @"母";
         }
     }
-    [app saveContext];
+    [_context save:nil];
 }
 
 - (void)testPerformanceExample {
