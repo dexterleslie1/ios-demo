@@ -14,10 +14,15 @@
 		5213BC4222AD563C00FDFA75 /* ios_coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5213BC4022AD563C00FDFA75 /* ios_coredata.xcdatamodeld */; };
 		5213BC4422AD563C00FDFA75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5213BC4322AD563C00FDFA75 /* Assets.xcassets */; };
 		5213BC4722AD563C00FDFA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5213BC4522AD563C00FDFA75 /* LaunchScreen.storyboard */; };
-		5213BC5222AD563C00FDFA75 /* ios_coredataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BC5122AD563C00FDFA75 /* ios_coredataTests.m */; };
+		5213BC5222AD563C00FDFA75 /* dogsCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BC5122AD563C00FDFA75 /* dogsCoreDataTests.m */; };
 		5213BC5D22AD563D00FDFA75 /* ios_coredataUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BC5C22AD563D00FDFA75 /* ios_coredataUITests.m */; };
 		5213BCC122ADF21D00FDFA75 /* Dog+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCBE22ADF21D00FDFA75 /* Dog+CoreDataClass.m */; };
 		5213BCC222ADF21D00FDFA75 /* Dog+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCC022ADF21D00FDFA75 /* Dog+CoreDataProperties.m */; };
+		5213BCC422AE0B1B00FDFA75 /* studentAndBookCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCC322AE0B1B00FDFA75 /* studentAndBookCoreDataTests.m */; };
+		5213BCCD22AE19D000FDFA75 /* Book+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCC622AE19D000FDFA75 /* Book+CoreDataClass.m */; };
+		5213BCCE22AE19D000FDFA75 /* Book+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCC822AE19D000FDFA75 /* Book+CoreDataProperties.m */; };
+		5213BCCF22AE19D000FDFA75 /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCCA22AE19D000FDFA75 /* Student+CoreDataClass.m */; };
+		5213BCD022AE19D000FDFA75 /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCCC22AE19D000FDFA75 /* Student+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +55,7 @@
 		5213BC4622AD563C00FDFA75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5213BC4822AD563C00FDFA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5213BC4D22AD563C00FDFA75 /* ios-coredataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-coredataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5213BC5122AD563C00FDFA75 /* ios_coredataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_coredataTests.m; sourceTree = "<group>"; };
+		5213BC5122AD563C00FDFA75 /* dogsCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dogsCoreDataTests.m; sourceTree = "<group>"; };
 		5213BC5322AD563C00FDFA75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5213BC5822AD563C00FDFA75 /* ios-coredataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios-coredataUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5213BC5C22AD563D00FDFA75 /* ios_coredataUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios_coredataUITests.m; sourceTree = "<group>"; };
@@ -59,6 +64,15 @@
 		5213BCBE22ADF21D00FDFA75 /* Dog+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dog+CoreDataClass.m"; sourceTree = "<group>"; };
 		5213BCBF22ADF21D00FDFA75 /* Dog+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Dog+CoreDataProperties.h"; sourceTree = "<group>"; };
 		5213BCC022ADF21D00FDFA75 /* Dog+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Dog+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5213BCC322AE0B1B00FDFA75 /* studentAndBookCoreDataTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = studentAndBookCoreDataTests.m; sourceTree = "<group>"; };
+		5213BCC522AE19D000FDFA75 /* Book+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Book+CoreDataClass.h"; sourceTree = "<group>"; };
+		5213BCC622AE19D000FDFA75 /* Book+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Book+CoreDataClass.m"; sourceTree = "<group>"; };
+		5213BCC722AE19D000FDFA75 /* Book+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Book+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5213BCC822AE19D000FDFA75 /* Book+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Book+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5213BCC922AE19D000FDFA75 /* Student+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
+		5213BCCA22AE19D000FDFA75 /* Student+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
+		5213BCCB22AE19D000FDFA75 /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5213BCCC22AE19D000FDFA75 /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +103,14 @@
 		5213BC2822AD563C00FDFA75 = {
 			isa = PBXGroup;
 			children = (
+				5213BCC522AE19D000FDFA75 /* Book+CoreDataClass.h */,
+				5213BCC622AE19D000FDFA75 /* Book+CoreDataClass.m */,
+				5213BCC722AE19D000FDFA75 /* Book+CoreDataProperties.h */,
+				5213BCC822AE19D000FDFA75 /* Book+CoreDataProperties.m */,
+				5213BCC922AE19D000FDFA75 /* Student+CoreDataClass.h */,
+				5213BCCA22AE19D000FDFA75 /* Student+CoreDataClass.m */,
+				5213BCCB22AE19D000FDFA75 /* Student+CoreDataProperties.h */,
+				5213BCCC22AE19D000FDFA75 /* Student+CoreDataProperties.m */,
 				5213BCBD22ADF21D00FDFA75 /* Dog+CoreDataClass.h */,
 				5213BCBE22ADF21D00FDFA75 /* Dog+CoreDataClass.m */,
 				5213BCBF22ADF21D00FDFA75 /* Dog+CoreDataProperties.h */,
@@ -138,8 +160,9 @@
 		5213BC5022AD563C00FDFA75 /* ios-coredataTests */ = {
 			isa = PBXGroup;
 			children = (
-				5213BC5122AD563C00FDFA75 /* ios_coredataTests.m */,
+				5213BC5122AD563C00FDFA75 /* dogsCoreDataTests.m */,
 				5213BC5322AD563C00FDFA75 /* Info.plist */,
+				5213BCC322AE0B1B00FDFA75 /* studentAndBookCoreDataTests.m */,
 			);
 			path = "ios-coredataTests";
 			sourceTree = "<group>";
@@ -287,10 +310,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5213BCC122ADF21D00FDFA75 /* Dog+CoreDataClass.m in Sources */,
+				5213BCD022AE19D000FDFA75 /* Student+CoreDataProperties.m in Sources */,
 				5213BC3C22AD563C00FDFA75 /* ViewController.m in Sources */,
+				5213BCCE22AE19D000FDFA75 /* Book+CoreDataProperties.m in Sources */,
 				5213BCC222ADF21D00FDFA75 /* Dog+CoreDataProperties.m in Sources */,
 				5213BC3922AD563C00FDFA75 /* AppDelegate.m in Sources */,
 				5213BC4222AD563C00FDFA75 /* ios_coredata.xcdatamodeld in Sources */,
+				5213BCCD22AE19D000FDFA75 /* Book+CoreDataClass.m in Sources */,
+				5213BCCF22AE19D000FDFA75 /* Student+CoreDataClass.m in Sources */,
 				5213BC3622AD563C00FDFA75 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +326,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5213BC5222AD563C00FDFA75 /* ios_coredataTests.m in Sources */,
+				5213BC5222AD563C00FDFA75 /* dogsCoreDataTests.m in Sources */,
+				5213BCC422AE0B1B00FDFA75 /* studentAndBookCoreDataTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
