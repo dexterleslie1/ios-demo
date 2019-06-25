@@ -23,6 +23,7 @@
 		5213BCCE22AE19D000FDFA75 /* Book+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCC822AE19D000FDFA75 /* Book+CoreDataProperties.m */; };
 		5213BCCF22AE19D000FDFA75 /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCCA22AE19D000FDFA75 /* Student+CoreDataClass.m */; };
 		5213BCD022AE19D000FDFA75 /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCCC22AE19D000FDFA75 /* Student+CoreDataProperties.m */; };
+		5213BCD522AE269500FDFA75 /* StudentStorageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BCD422AE269500FDFA75 /* StudentStorageManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		5213BCCA22AE19D000FDFA75 /* Student+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
 		5213BCCB22AE19D000FDFA75 /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataProperties.h"; sourceTree = "<group>"; };
 		5213BCCC22AE19D000FDFA75 /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5213BCD322AE269500FDFA75 /* StudentStorageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentStorageManager.h; sourceTree = "<group>"; };
+		5213BCD422AE269500FDFA75 /* StudentStorageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentStorageManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +138,7 @@
 		5213BC3322AD563C00FDFA75 /* ios-coredata */ = {
 			isa = PBXGroup;
 			children = (
+				5213BCD222AE266600FDFA75 /* storagemanager */,
 				5213BC3722AD563C00FDFA75 /* AppDelegate.h */,
 				5213BC3822AD563C00FDFA75 /* AppDelegate.m */,
 				5213BC3A22AD563C00FDFA75 /* ViewController.h */,
@@ -174,6 +178,15 @@
 				5213BC5E22AD563D00FDFA75 /* Info.plist */,
 			);
 			path = "ios-coredataUITests";
+			sourceTree = "<group>";
+		};
+		5213BCD222AE266600FDFA75 /* storagemanager */ = {
+			isa = PBXGroup;
+			children = (
+				5213BCD322AE269500FDFA75 /* StudentStorageManager.h */,
+				5213BCD422AE269500FDFA75 /* StudentStorageManager.m */,
+			);
+			name = storagemanager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +332,7 @@
 				5213BCCD22AE19D000FDFA75 /* Book+CoreDataClass.m in Sources */,
 				5213BCCF22AE19D000FDFA75 /* Student+CoreDataClass.m in Sources */,
 				5213BC3622AD563C00FDFA75 /* main.m in Sources */,
+				5213BCD522AE269500FDFA75 /* StudentStorageManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
