@@ -24,11 +24,20 @@
     
     // Data container path
     NSString *dataContainerPath = NSHomeDirectory();
-    NSLog(@"data container path:%@", dataContainerPath);
+    NSLog(@"Data container home path:%@", dataContainerPath);
+    
+    NSString *libraryDirectoryPath = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"Data container library directory path:%@", libraryDirectoryPath);
     
     // ios下只有一个document目录，所以firstObject即可
     NSString *documentPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-    NSLog(@"document path:%@", documentPath);
+    NSLog(@"Data container document path:%@", documentPath);
+    
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"Data container library caches path:%@", cachePath);
+    
+    NSString *applicationSupportPath = [NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES) firstObject];
+    NSLog(@"Data container library application support path:%@", applicationSupportPath);
     
     // Temporary path
     NSString *tempPath = NSTemporaryDirectory();
