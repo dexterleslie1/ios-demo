@@ -14,4 +14,6 @@
 @property NSString * name;
 @property NSString * password;
 
+- (void) toString:(int) age;
+
 @end

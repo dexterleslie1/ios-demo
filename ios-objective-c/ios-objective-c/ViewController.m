@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Person.h"
+#import "ClassStaticMethod.h"
 
 @interface ViewController ()
 
@@ -24,6 +25,9 @@
     person.password = @"123456789";
     
     NSLog(@"name=%@, password=%@", person.name, person.password);
+    [person toString:12];
+    
+    [ClassStaticMethod staticMethod:1 parameter2:2];
 }
 
 

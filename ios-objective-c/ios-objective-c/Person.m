@@ -13,4 +13,8 @@
 @synthesize name;
 @synthesize password;
 
+- (void) toString:(int) age {
+    NSLog(@"age=%d, name=%@, password=%@", age, name, password);
+}
+
 @end
