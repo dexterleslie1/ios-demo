@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22A04B7123CB2F3B00070DBB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A04B7023CB2F3B00070DBB /* AppDelegate.m */; };
+		22A04B7423CB2F3B00070DBB /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A04B7323CB2F3B00070DBB /* SceneDelegate.m */; };
+		22A04B7723CB2F3B00070DBB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A04B7623CB2F3B00070DBB /* ViewController.m */; };
+		22A04B7A23CB2F3B00070DBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A04B7823CB2F3B00070DBB /* Main.storyboard */; };
+		22A04B7C23CB2F3E00070DBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A04B7B23CB2F3E00070DBB /* Assets.xcassets */; };
+		22A04B7F23CB2F3E00070DBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A04B7D23CB2F3E00070DBB /* LaunchScreen.storyboard */; };
+		22A04B8223CB2F3E00070DBB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A04B8123CB2F3E00070DBB /* main.m */; };
+		22A04B8C23CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A04B8B23CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.m */; };
+		22A04B9723CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A04B9623CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.m */; };
+		22A04BA523CB69F400070DBB /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 22A04BA423CB69F400070DBB /* Podfile */; };
+		2BBB400541B7C9A7103ABE4C /* libPods-afnetworkreachabilitymanager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5DA92E113ED1E3B29AE6C62 /* libPods-afnetworkreachabilitymanager.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22A04B8823CB2F3E00070DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A04B6423CB2F3B00070DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A04B6B23CB2F3B00070DBB;
+			remoteInfo = afnetworkreachabilitymanager;
+		};
+		22A04B9323CB2F3E00070DBB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A04B6423CB2F3B00070DBB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A04B6B23CB2F3B00070DBB;
+			remoteInfo = afnetworkreachabilitymanager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22A04B6C23CB2F3B00070DBB /* afnetworkreachabilitymanager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = afnetworkreachabilitymanager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A04B6F23CB2F3B00070DBB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22A04B7023CB2F3B00070DBB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22A04B7223CB2F3B00070DBB /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		22A04B7323CB2F3B00070DBB /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		22A04B7523CB2F3B00070DBB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		22A04B7623CB2F3B00070DBB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		22A04B7923CB2F3B00070DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22A04B7B23CB2F3E00070DBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22A04B7E23CB2F3E00070DBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22A04B8023CB2F3E00070DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A04B8123CB2F3E00070DBB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22A04B8723CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = afnetworkreachabilitymanagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A04B8B23CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = afnetworkreachabilitymanagerTests.m; sourceTree = "<group>"; };
+		22A04B8D23CB2F3E00070DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A04B9223CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = afnetworkreachabilitymanagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A04B9623CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = afnetworkreachabilitymanagerUITests.m; sourceTree = "<group>"; };
+		22A04B9823CB2F3E00070DBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A04BA423CB69F400070DBB /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		ABC6F01407B1416A172665C7 /* Pods-afnetworkreachabilitymanager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-afnetworkreachabilitymanager.release.xcconfig"; path = "Target Support Files/Pods-afnetworkreachabilitymanager/Pods-afnetworkreachabilitymanager.release.xcconfig"; sourceTree = "<group>"; };
+		AFBBBB7EC936F90E2CC51E56 /* Pods-afnetworkreachabilitymanager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-afnetworkreachabilitymanager.debug.xcconfig"; path = "Target Support Files/Pods-afnetworkreachabilitymanager/Pods-afnetworkreachabilitymanager.debug.xcconfig"; sourceTree = "<group>"; };
+		C5DA92E113ED1E3B29AE6C62 /* libPods-afnetworkreachabilitymanager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-afnetworkreachabilitymanager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22A04B6923CB2F3B00070DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBB400541B7C9A7103ABE4C /* libPods-afnetworkreachabilitymanager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A04B8423CB2F3E00070DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A04B8F23CB2F3E00070DBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22A04B6323CB2F3B00070DBB = {
+			isa = PBXGroup;
+			children = (
+				22A04BA423CB69F400070DBB /* Podfile */,
+				22A04B6E23CB2F3B00070DBB /* afnetworkreachabilitymanager */,
+				22A04B8A23CB2F3E00070DBB /* afnetworkreachabilitymanagerTests */,
+				22A04B9523CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests */,
+				22A04B6D23CB2F3B00070DBB /* Products */,
+				B3D2E5DE83A0D31F3CA08B9E /* Pods */,
+				3BD97764DBE38E3110A88312 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22A04B6D23CB2F3B00070DBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22A04B6C23CB2F3B00070DBB /* afnetworkreachabilitymanager.app */,
+				22A04B8723CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.xctest */,
+				22A04B9223CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22A04B6E23CB2F3B00070DBB /* afnetworkreachabilitymanager */ = {
+			isa = PBXGroup;
+			children = (
+				22A04B6F23CB2F3B00070DBB /* AppDelegate.h */,
+				22A04B7023CB2F3B00070DBB /* AppDelegate.m */,
+				22A04B7223CB2F3B00070DBB /* SceneDelegate.h */,
+				22A04B7323CB2F3B00070DBB /* SceneDelegate.m */,
+				22A04B7523CB2F3B00070DBB /* ViewController.h */,
+				22A04B7623CB2F3B00070DBB /* ViewController.m */,
+				22A04B7823CB2F3B00070DBB /* Main.storyboard */,
+				22A04B7B23CB2F3E00070DBB /* Assets.xcassets */,
+				22A04B7D23CB2F3E00070DBB /* LaunchScreen.storyboard */,
+				22A04B8023CB2F3E00070DBB /* Info.plist */,
+				22A04B8123CB2F3E00070DBB /* main.m */,
+			);
+			path = afnetworkreachabilitymanager;
+			sourceTree = "<group>";
+		};
+		22A04B8A23CB2F3E00070DBB /* afnetworkreachabilitymanagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				22A04B8B23CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.m */,
+				22A04B8D23CB2F3E00070DBB /* Info.plist */,
+			);
+			path = afnetworkreachabilitymanagerTests;
+			sourceTree = "<group>";
+		};
+		22A04B9523CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22A04B9623CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.m */,
+				22A04B9823CB2F3E00070DBB /* Info.plist */,
+			);
+			path = afnetworkreachabilitymanagerUITests;
+			sourceTree = "<group>";
+		};
+		3BD97764DBE38E3110A88312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5DA92E113ED1E3B29AE6C62 /* libPods-afnetworkreachabilitymanager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3D2E5DE83A0D31F3CA08B9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AFBBBB7EC936F90E2CC51E56 /* Pods-afnetworkreachabilitymanager.debug.xcconfig */,
+				ABC6F01407B1416A172665C7 /* Pods-afnetworkreachabilitymanager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22A04B6B23CB2F3B00070DBB /* afnetworkreachabilitymanager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A04B9B23CB2F3E00070DBB /* Build configuration list for PBXNativeTarget "afnetworkreachabilitymanager" */;
+			buildPhases = (
+				D7B46AFDDFA369EDF659F3BF /* [CP] Check Pods Manifest.lock */,
+				22A04B6823CB2F3B00070DBB /* Sources */,
+				22A04B6923CB2F3B00070DBB /* Frameworks */,
+				22A04B6A23CB2F3B00070DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = afnetworkreachabilitymanager;
+			productName = afnetworkreachabilitymanager;
+			productReference = 22A04B6C23CB2F3B00070DBB /* afnetworkreachabilitymanager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22A04B8623CB2F3E00070DBB /* afnetworkreachabilitymanagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A04B9E23CB2F3E00070DBB /* Build configuration list for PBXNativeTarget "afnetworkreachabilitymanagerTests" */;
+			buildPhases = (
+				22A04B8323CB2F3E00070DBB /* Sources */,
+				22A04B8423CB2F3E00070DBB /* Frameworks */,
+				22A04B8523CB2F3E00070DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22A04B8923CB2F3E00070DBB /* PBXTargetDependency */,
+			);
+			name = afnetworkreachabilitymanagerTests;
+			productName = afnetworkreachabilitymanagerTests;
+			productReference = 22A04B8723CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22A04B9123CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A04BA123CB2F3E00070DBB /* Build configuration list for PBXNativeTarget "afnetworkreachabilitymanagerUITests" */;
+			buildPhases = (
+				22A04B8E23CB2F3E00070DBB /* Sources */,
+				22A04B8F23CB2F3E00070DBB /* Frameworks */,
+				22A04B9023CB2F3E00070DBB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22A04B9423CB2F3E00070DBB /* PBXTargetDependency */,
+			);
+			name = afnetworkreachabilitymanagerUITests;
+			productName = afnetworkreachabilitymanagerUITests;
+			productReference = 22A04B9223CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22A04B6423CB2F3B00070DBB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = MacOS;
+				TargetAttributes = {
+					22A04B6B23CB2F3B00070DBB = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					22A04B8623CB2F3E00070DBB = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 22A04B6B23CB2F3B00070DBB;
+					};
+					22A04B9123CB2F3E00070DBB = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 22A04B6B23CB2F3B00070DBB;
+					};
+				};
+			};
+			buildConfigurationList = 22A04B6723CB2F3B00070DBB /* Build configuration list for PBXProject "afnetworkreachabilitymanager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22A04B6323CB2F3B00070DBB;
+			productRefGroup = 22A04B6D23CB2F3B00070DBB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22A04B6B23CB2F3B00070DBB /* afnetworkreachabilitymanager */,
+				22A04B8623CB2F3E00070DBB /* afnetworkreachabilitymanagerTests */,
+				22A04B9123CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22A04B6A23CB2F3B00070DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A04B7F23CB2F3E00070DBB /* LaunchScreen.storyboard in Resources */,
+				22A04B7C23CB2F3E00070DBB /* Assets.xcassets in Resources */,
+				22A04BA523CB69F400070DBB /* Podfile in Resources */,
+				22A04B7A23CB2F3B00070DBB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A04B8523CB2F3E00070DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A04B9023CB2F3E00070DBB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D7B46AFDDFA369EDF659F3BF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-afnetworkreachabilitymanager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22A04B6823CB2F3B00070DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A04B7723CB2F3B00070DBB /* ViewController.m in Sources */,
+				22A04B7123CB2F3B00070DBB /* AppDelegate.m in Sources */,
+				22A04B8223CB2F3E00070DBB /* main.m in Sources */,
+				22A04B7423CB2F3B00070DBB /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A04B8323CB2F3E00070DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A04B8C23CB2F3E00070DBB /* afnetworkreachabilitymanagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A04B8E23CB2F3E00070DBB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A04B9723CB2F3E00070DBB /* afnetworkreachabilitymanagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22A04B8923CB2F3E00070DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A04B6B23CB2F3B00070DBB /* afnetworkreachabilitymanager */;
+			targetProxy = 22A04B8823CB2F3E00070DBB /* PBXContainerItemProxy */;
+		};
+		22A04B9423CB2F3E00070DBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A04B6B23CB2F3B00070DBB /* afnetworkreachabilitymanager */;
+			targetProxy = 22A04B9323CB2F3E00070DBB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22A04B7823CB2F3B00070DBB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22A04B7923CB2F3B00070DBB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22A04B7D23CB2F3E00070DBB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22A04B7E23CB2F3E00070DBB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22A04B9923CB2F3E00070DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22A04B9A23CB2F3E00070DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22A04B9C23CB2F3E00070DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFBBBB7EC936F90E2CC51E56 /* Pods-afnetworkreachabilitymanager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R87NBS669L;
+				INFOPLIST_FILE = afnetworkreachabilitymanager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.future.demo.ios.afnetworkreachabilitymanager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22A04B9D23CB2F3E00070DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABC6F01407B1416A172665C7 /* Pods-afnetworkreachabilitymanager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R87NBS669L;
+				INFOPLIST_FILE = afnetworkreachabilitymanager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.future.demo.ios.afnetworkreachabilitymanager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22A04B9F23CB2F3E00070DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = afnetworkreachabilitymanagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.future.demo.ios.afnetworkreachabilitymanagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/afnetworkreachabilitymanager.app/afnetworkreachabilitymanager";
+			};
+			name = Debug;
+		};
+		22A04BA023CB2F3E00070DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = afnetworkreachabilitymanagerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.future.demo.ios.afnetworkreachabilitymanagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/afnetworkreachabilitymanager.app/afnetworkreachabilitymanager";
+			};
+			name = Release;
+		};
+		22A04BA223CB2F3E00070DBB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = afnetworkreachabilitymanagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.future.demo.ios.afnetworkreachabilitymanagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = afnetworkreachabilitymanager;
+			};
+			name = Debug;
+		};
+		22A04BA323CB2F3E00070DBB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = afnetworkreachabilitymanagerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.future.demo.ios.afnetworkreachabilitymanagerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = afnetworkreachabilitymanager;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22A04B6723CB2F3B00070DBB /* Build configuration list for PBXProject "afnetworkreachabilitymanager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A04B9923CB2F3E00070DBB /* Debug */,
+				22A04B9A23CB2F3E00070DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A04B9B23CB2F3E00070DBB /* Build configuration list for PBXNativeTarget "afnetworkreachabilitymanager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A04B9C23CB2F3E00070DBB /* Debug */,
+				22A04B9D23CB2F3E00070DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A04B9E23CB2F3E00070DBB /* Build configuration list for PBXNativeTarget "afnetworkreachabilitymanagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A04B9F23CB2F3E00070DBB /* Debug */,
+				22A04BA023CB2F3E00070DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A04BA123CB2F3E00070DBB /* Build configuration list for PBXNativeTarget "afnetworkreachabilitymanagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A04BA223CB2F3E00070DBB /* Debug */,
+				22A04BA323CB2F3E00070DBB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22A04B6423CB2F3B00070DBB /* Project object */;
+}
