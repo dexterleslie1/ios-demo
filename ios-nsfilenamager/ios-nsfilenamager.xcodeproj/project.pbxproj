@@ -237,6 +237,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -517,6 +518,7 @@
 				52DB535A22D338C1005A0F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52DB535B22D338C1005A0F30 /* Build configuration list for PBXNativeTarget "ios-nsfilenamagerTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +527,7 @@
 				52DB535D22D338C1005A0F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52DB535E22D338C1005A0F30 /* Build configuration list for PBXNativeTarget "ios-nsfilenamagerUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +536,7 @@
 				52DB536022D338C1005A0F30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
