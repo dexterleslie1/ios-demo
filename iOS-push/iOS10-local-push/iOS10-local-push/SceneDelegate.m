@@ -1,7 +1,6 @@
 #import "SceneDelegate.h"
-#import <UserNotifications/UserNotifications.h>
 
-@interface SceneDelegate ()<UNUserNotificationCenterDelegate>
+@interface SceneDelegate ()
 
 @end
 
@@ -12,23 +11,6 @@
     // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
     // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-    
-    // 使用 UNUserNotificationCenter 来管理通知
-    UNUserNotificationCenter *userNotificationCenter = [UNUserNotificationCenter currentNotificationCenter];
-    // 监听回调事件
-    userNotificationCenter.delegate = self;
-    // iOS 10 使用以下方法注册，才能得到授权
-    [userNotificationCenter requestAuthorizationWithOptions:(UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge) completionHandler:^(BOOL granted, NSError * _Nullable error) {
-        if(granted) {
-            NSLog(@"已授权，NSError：%@", error);
-        } else {
-            NSLog(@"未授权，NSError：%@", error);
-        }
-    }];
-    // 获取当前的通知设置，UNNotificationSettings 是只读对象，不能直接修改，只能通过以下方法获取
-    [userNotificationCenter getNotificationSettingsWithCompletionHandler:^(UNNotificationSettings * _Nonnull settings) {
-        
-    }];
 }
 
 
@@ -62,13 +44,6 @@
     // Called as the scene transitions from the foreground to the background.
     // Use this method to save data, release shared resources, and store enough scene-specific state information
     // to restore the scene back to its current state.
-}
-
-#pragma mark - UNUserNotificationCenterDelegate
-// 在展示通知前进行处理，即有机会在展示通知前再修改通知内容。
--(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
-    // 处理完成后条用 completionHandler ，用于指示在前台显示通知的形式
-    completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionBadge | UNNotificationPresentationOptionSound);
 }
 
 @end

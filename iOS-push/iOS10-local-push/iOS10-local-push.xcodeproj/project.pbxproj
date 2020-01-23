@@ -54,6 +54,7 @@
 		22001E3023D1E2A7003E3065 /* iOS10-local-pushUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS10-local-pushUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22001E3423D1E2A7003E3065 /* iOS10_local_pushUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS10_local_pushUITests.m; sourceTree = "<group>"; };
 		22001E3623D1E2A7003E3065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F2EF9523D9EE1800F63B06 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +89,7 @@
 				22001E2823D1E2A7003E3065 /* iOS10-local-pushTests */,
 				22001E3323D1E2A7003E3065 /* iOS10-local-pushUITests */,
 				22001E0B23D1E2A4003E3065 /* Products */,
+				22F2EF9423D9EE1700F63B06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +137,14 @@
 				22001E3623D1E2A7003E3065 /* Info.plist */,
 			);
 			path = "iOS10-local-pushUITests";
+			sourceTree = "<group>";
+		};
+		22F2EF9423D9EE1700F63B06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22F2EF9523D9EE1800F63B06 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -440,7 +450,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
 				INFOPLIST_FILE = "iOS10-local-push/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,7 +468,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
 				INFOPLIST_FILE = "iOS10-local-push/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
