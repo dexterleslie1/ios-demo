@@ -29,7 +29,7 @@
     content.title = @"通知标题";
     content.body = @"通知内容";
     content.sound = [UNNotificationSound defaultSound];
-    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:10 repeats:NO];
+    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:5 repeats:NO];
     UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"fiveSeconds" content:content trigger:trigger];
     [userNotificationCenter addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
         NSLog(@"成功推送通知");
