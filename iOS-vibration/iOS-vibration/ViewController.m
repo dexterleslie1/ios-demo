@@ -27,7 +27,7 @@
 }
 
 - (void) buttonStartVibrationOnClicked: (UIButton *) button {
-    [[VibrationManager sharedManager] startVibrate];
+    [[VibrationManager sharedManager] startVibrate: 5];
 }
 
 - (void) buttonStopVibrationOnClicked: (UIButton *) button {

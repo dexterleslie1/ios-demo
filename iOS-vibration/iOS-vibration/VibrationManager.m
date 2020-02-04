@@ -22,7 +22,7 @@
     return sharedManager;
 }
 
-- (void) startVibrate {
+- (void) startVibrate:(int) timeoutSeconds{
     @synchronized (self) {
         if(!self.stopped) {
             return;
@@ -30,11 +30,23 @@
         self.stopped = NO;
     }
     
+    if(timeoutSeconds<=0) {
+        timeoutSeconds = 10;
+    }
+    
+    NSDate * startTime = [NSDate date];
     dispatch_queue_t queue = dispatch_queue_create("com.future.demo.ios.vibration", DISPATCH_QUEUE_SERIAL);
     dispatch_async(queue, ^{
-        while(!self.stopped) {
+        BOOL isTimeout = NO;
+        while(!self.stopped && !isTimeout) {
             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
             [NSThread sleepForTimeInterval:1];
+            
+            NSDate *currentTime = [NSDate date];
+            NSTimeInterval interval = [currentTime timeIntervalSinceDate:startTime];
+            if(interval>=timeoutSeconds) {
+                self.stopped = YES;
+            }
         }
     });
 }

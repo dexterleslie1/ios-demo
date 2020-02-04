@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL stopped;
 
 + (id) sharedManager;
-- (void) startVibrate;
+- (void) startVibrate:(int) timeoutSeconds;
 - (void) stopVibrate;
 
 @end
