@@ -4,3 +4,6 @@ Podfile.lock
 .idea
 *.iml
 *.class
+*.plist
+*.xcuserstate
+*.xcworkspacedata
