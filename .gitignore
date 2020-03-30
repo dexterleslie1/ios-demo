@@ -7,3 +7,4 @@ Podfile.lock
 *.plist
 *.xcuserstate
 *.xcworkspacedata
+*.xcbkptlist
