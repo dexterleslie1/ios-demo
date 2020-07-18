@@ -9,6 +9,7 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIButton *buttonSyncConcurrent;
 @property (weak, nonatomic) IBOutlet UIButton *buttonAsyncConcurrent;
 @property (weak, nonatomic) IBOutlet UIButton *buttonSyncSerial;
@@ -18,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *buttonSyncGlobalQueue;
 @property (weak, nonatomic) IBOutlet UIButton *buttonAsyncGlobalQueue;
 @property (weak, nonatomic) IBOutlet UIButton *buttonExecuteDelay;
+@property (weak, nonatomic) IBOutlet UIButton *buttonLog;
 
 @end
 
@@ -36,230 +38,208 @@
     [self.buttonSyncGlobalQueue addTarget:self action:@selector(buttonSyncGlobalQueueOnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.buttonAsyncGlobalQueue addTarget:self action:@selector(buttonAsyncGlobalQueueOnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [self.buttonExecuteDelay addTarget:self action:@selector(buttonExecuteDelayOnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.buttonLog addTarget:self action:@selector(buttonLogOnClicked:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void) buttonSyncConcurrentOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"syncConcurrent---begin");
+    NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"同步+并发 开始");
     
     dispatch_queue_t queue = dispatch_queue_create("com.future.demo.ios.gcd", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_sync(queue, ^{
-        // 追加任务 1
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:3];              // 模拟耗时操作
+        NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_sync(queue, ^{
-        // 追加任务 2
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_sync(queue, ^{
-        // 追加任务 3
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+        NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
-    NSLog(@"syncConcurrent---end");
+    NSLog(@"同步+并发 结束");
 }
 
 - (void) buttonAsyncConcurrentOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"asyncConcurrent---begin");
+    NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"异步+并发 开始");
     
     dispatch_queue_t queue = dispatch_queue_create("com.future.demo.ios.gcd", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_async(queue, ^{
-        // 追加任务 1
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:3];              // 模拟耗时操作
+        NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_async(queue, ^{
-        // 追加任务 2
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_async(queue, ^{
-        // 追加任务 3
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+        NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
-    NSLog(@"asyncConcurrent---end");
+    NSLog(@"异步+并发 结束");
 }
 
 - (void) buttonSyncSerialOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"syncSerial---begin");
+    NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"同步+串行 开始");
     
     dispatch_queue_t queue = dispatch_queue_create("com.future.demo.ios.gcd", DISPATCH_QUEUE_SERIAL);
     
     dispatch_sync(queue, ^{
-        // 追加任务 1
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:3];              // 模拟耗时操作
+        NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     dispatch_sync(queue, ^{
-        // 追加任务 2
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     dispatch_sync(queue, ^{
-        // 追加任务 3
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+        NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
-    NSLog(@"syncSerial---end");
+    NSLog(@"同步+串行 结束");
 }
 
 - (void) buttonAsyncSerialOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"asyncSerial---begin");
+    NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"异步+串行 开始");
     
     dispatch_queue_t queue = dispatch_queue_create("net.bujige.testQueue", DISPATCH_QUEUE_SERIAL);
     
     dispatch_async(queue, ^{
-        // 追加任务 1
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     dispatch_async(queue, ^{
-        // 追加任务 2
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     dispatch_async(queue, ^{
-        // 追加任务 3
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+        NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
-    NSLog(@"asyncSerial---end");
+    NSLog(@"异步+串行 结束");
 }
 
 - (void) buttonSyncMainQueueOnClicked:(UIButton *) button {
     [NSThread detachNewThreadWithBlock:^{
-        NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-        NSLog(@"syncMain---begin");
+        NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+        NSLog(@"同步+主队列 开始");
         
         dispatch_queue_t queue = dispatch_get_main_queue();
         
         dispatch_sync(queue, ^{
-            // 追加任务 1
-            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-            NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+            [NSThread sleepForTimeInterval:3];              // 模拟耗时操作
+            NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
         });
         
         dispatch_sync(queue, ^{
-            // 追加任务 2
             [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-            NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+            NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
         });
         
         dispatch_sync(queue, ^{
-            // 追加任务 3
-            [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-            NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+            [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+            NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
         });
         
-        NSLog(@"syncMain---end");
+        NSLog(@"同步+主队列 结束");
     }];
 }
 
 - (void) buttonAsyncMainQueueOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"asyncMain---begin");
+    NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"异步+主队列 开始");
     
     dispatch_queue_t queue = dispatch_get_main_queue();
     
     dispatch_async(queue, ^{
-        // 追加任务 1
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:3];              // 模拟耗时操作
+        NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_async(queue, ^{
-        // 追加任务 2
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_async(queue, ^{
-        // 追加任务 3
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+        NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
-    NSLog(@"asyncMain---end");
+    NSLog(@"异步+主队列 结束");
 }
 
 - (void) buttonSyncGlobalQueueOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"syncGlobalQueue---begin");
+    NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"同步+全局并发 开始");
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     dispatch_sync(queue, ^{
-        // 追加任务 1
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:3];              // 模拟耗时操作
+        NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_sync(queue, ^{
-        // 追加任务 2
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_sync(queue, ^{
-        // 追加任务 3
-        [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
+        NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
-    NSLog(@"syncGlobalQueue---end");
+    NSLog(@"同步+全局并发 结束");
 }
 
 - (void) buttonAsyncGlobalQueueOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"asyncGlobalQueue---begin");
+    NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
+    NSLog(@"异步+全局并发 开始");
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
     dispatch_async(queue, ^{
-        // 追加任务 1
         [NSThread sleepForTimeInterval:3];              // 模拟耗时操作
-        NSLog(@"1---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠3秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_async(queue, ^{
-        // 追加任务 2
         [NSThread sleepForTimeInterval:2];              // 模拟耗时操作
-        NSLog(@"2---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠2秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
     dispatch_async(queue, ^{
-        // 追加任务 3
         [NSThread sleepForTimeInterval:1];              // 模拟耗时操作
-        NSLog(@"3---%@",[NSThread currentThread]);      // 打印当前线程
+        NSLog(@"任务休眠1秒 - %@",[NSThread currentThread]);      // 打印当前线程
     });
     
-    NSLog(@"asyncGlobalQueue---end");
+    NSLog(@"异步+全局并发 结束");
 }
 
 - (void) buttonExecuteDelayOnClicked:(UIButton *) button {
-    NSLog(@"currentThread---%@",[NSThread currentThread]);  // 打印当前线程
-    NSLog(@"asyncMain---begin");
-    
+    // 延迟两秒打印当前线程
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        // 2.0 秒后异步追加任务代码到主队列，并开始执行
-        NSLog(@"after---%@",[NSThread currentThread]);  // 打印当前线程
+        NSLog(@"当前线程 - %@",[NSThread currentThread]);  // 打印当前线程
     });
+}
+
+- (void) buttonLogOnClicked:(UIButton *) button {
+    NSLog(@"打印消息");
 }
 
 @end

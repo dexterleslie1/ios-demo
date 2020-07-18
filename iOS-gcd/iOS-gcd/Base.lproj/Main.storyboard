@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,6 +61,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="延时执行"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpv-Ff-JOm">
+                                <rect key="frame" x="100" y="416" width="215" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="打印日志，测试是否阻塞主线程"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -70,6 +76,7 @@
                         <outlet property="buttonAsyncMainQueue" destination="pZo-kj-G7A" id="pb4-h0-t9I"/>
                         <outlet property="buttonAsyncSerial" destination="JNQ-SV-vmT" id="R5D-qa-TsX"/>
                         <outlet property="buttonExecuteDelay" destination="4HM-6W-Ue0" id="ued-bd-Jmu"/>
+                        <outlet property="buttonLog" destination="hpv-Ff-JOm" id="fHx-ik-sLd"/>
                         <outlet property="buttonSyncConcurrent" destination="x0P-Fv-Rjl" id="n5B-bE-bPw"/>
                         <outlet property="buttonSyncGlobalQueue" destination="hdi-QN-dW2" id="Hp6-36-CwN"/>
                         <outlet property="buttonSyncMainQueue" destination="Vtt-TM-5AK" id="UZE-Hl-rlw"/>
