@@ -19,14 +19,26 @@
 @implementation NotificationService
 
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler{
-    [[UNUserNotificationCenter currentNotificationCenter] removeAllDeliveredNotifications];
+//    [[UNUserNotificationCenter currentNotificationCenter] removeAllDeliveredNotifications];
+    NSDictionary *userInfo = request.content.userInfo;
+    NSString *customPayloadId = [userInfo objectForKey:@"custom-payload-id"];
     
-    NSLog(@"回调didReceiveNotificationRequest1");
+    UNUserNotificationCenter *notificationCenter = [UNUserNotificationCenter currentNotificationCenter];
+    [notificationCenter getDeliveredNotificationsWithCompletionHandler:^(NSArray<UNNotification *> * _Nonnull notifications) {
+        for(UNNotification *notification in notifications) {
+            NSString *customPayloadIdTemporary = notification.request.content.userInfo[@"custom-payload-id"];
+            if([customPayloadId isEqualToString:customPayloadIdTemporary]) {
+                NSArray *identifiers = [NSArray arrayWithObject: notification.request.identifier];
+                [notificationCenter removeDeliveredNotificationsWithIdentifiers: identifiers];
+            }
+        }
+    }];
+    
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
     
     // Modify the notification content here...
-    self.bestAttemptContent.title = [NSString stringWithFormat:@"%@ [modified]", self.bestAttemptContent.title];
+    self.bestAttemptContent.title = [NSString stringWithFormat:@"id:%@ - %@ [modified]", customPayloadId, self.bestAttemptContent.title];
     self.bestAttemptContent.sound = [UNNotificationSound soundNamed:@"audio.wav"];
     
     self.contentHandler(self.bestAttemptContent);
