@@ -45,12 +45,17 @@
     
     NSData *dataOriginal = UIImageJPEGRepresentation(image, 1.0);
     NSData *data = UIImageJPEGRepresentation(imageReduceFrame, 0.5);
+    
+    NSString *imageBase64 = [NSString stringWithFormat:@"%@",[data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength]] ;
+    
     UIImage *imageCompression = [UIImage imageWithData:data];
     
     [self.imageViewCompression setImage:imageCompression];
     NSLog(@"原图 %lu KB，压缩后图片 %lu KB", dataOriginal.length/1024, data.length/1024);
     NSLog(@"原图宽：%f，高：%f，压缩后图片宽：%f，高：%f", image.size.width, image.size.height,
           imageCompression.size.width, imageCompression.size.height);
+    
+    NSLog(@"图片压缩后base64：%@", imageBase64);
 }
 
 @end
