@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+
 @property (weak, nonatomic) IBOutlet UIButton *buttonNotification;
+@property (assign, nonatomic) int counter;
 
 @end
 
@@ -23,6 +25,7 @@
     [notificationCenter addObserver:self selector:@selector(subscriber1:) name:@"notification1" object:nil];
     
     [self.buttonNotification addTarget:self action:@selector(buttonClick1:) forControlEvents:UIControlEventTouchDown];
+    self.counter = 0;
 }
 
 - (void) dealloc {
@@ -31,12 +34,16 @@
 }
 
 - (void) buttonClick1:(id) sender {
-    NSNotification *notification = [NSNotification notificationWithName:@"notification1" object:nil];
+    self.counter++;
+    NSDictionary *userInfo = @{@"data": [NSNumber numberWithInt:self.counter]};
+    NSNotification *notification = [NSNotification notificationWithName:@"notification1" object:nil userInfo:userInfo];
     [[NSNotificationCenter defaultCenter] postNotification: notification];
 }
 
-- (void) subscriber1:(id) sender {
-    NSLog(@"收到通知");
+- (void) subscriber1:(NSNotification *) sender {
+    NSDictionary *userInfo = sender.userInfo;
+    NSLog(@"接收到通知data=%@", [userInfo objectForKey:@"data"]);
+    sleep(0.05);
 }
 
 @end
