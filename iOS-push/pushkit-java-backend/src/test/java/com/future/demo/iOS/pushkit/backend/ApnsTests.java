@@ -16,13 +16,13 @@ public class ApnsTests {
     @Test
     public void testPushKit() {
         String userHome = System.getProperty("user.home");
-        String filePath = userHome + File.separator + "com.azp.iOS.pushkit.p12";
+        String filePath = userHome + File.separator + "voip-service-pushkit-demo.p12";
         ApnsService service =
                 APNS.newService()
                         .withCert(filePath, "123456")
                         .withSandboxDestination()
                         .build();
-        String token = "8de3e47838f3ac284d7d731d3e9ee4d9adddb779418120fe75e8083afca6259a";
+        String token = "21302d81dee43941a16890f8b439854de4c5c72ed2727743c92eb9123a1d22ab";
         String title = "测试通知";
         String content = "测试通知内容";
         String payload = APNS.newPayload().alertTitle(title).alertBody(content).build();

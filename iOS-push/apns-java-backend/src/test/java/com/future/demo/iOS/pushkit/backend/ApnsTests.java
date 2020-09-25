@@ -60,7 +60,7 @@ public class ApnsTests {
                         .withCert(filePath, "123456")
                         .withSandboxDestination()
                         .build();
-        String token = "ce9f10a2f9c6e5238dba39c93ffe52728c5f74a77293b3135993fa8505cca58d";
+        String token = "fd275a815f0cf3259f93a2d6f6952809cded19b5e3377ea0bc991c4653ed012a";
         String identifier = "a125";
         Date currentTime = new Date();
         String currentTimeString = DateFormatUtils.format(currentTime, "yyyy-MM-dd HH:mm:ss");

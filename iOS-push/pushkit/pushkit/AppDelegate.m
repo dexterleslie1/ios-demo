@@ -9,12 +9,10 @@
 #import "AppDelegate.h"
 #import <PushKit/PushKit.h>
 #import <UserNotifications/UserNotifications.h>
-#import <CallKit/CallKit.h>
 
 @interface AppDelegate () <PKPushRegistryDelegate, UNUserNotificationCenterDelegate>
 
 @property (nonatomic, strong) PKPushRegistry *pushRegistry;
-@property (nonatomic, strong) CXProvider *provider;
 
 @end
 
@@ -63,16 +61,9 @@
 
 - (void)pushRegistry:(PKPushRegistry *)registry didReceiveIncomingPushWithPayload:(PKPushPayload *)payload forType:(PKPushType)type {
     NSDictionary *payloadDictionary = payload.dictionaryPayload;
-//    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-//    [notificationCenter postNotificationName:@"notificationIncomingPayload" object:nil userInfo:payloadDictionary];
-    CXCallUpdate *callUpdate = [[CXCallUpdate alloc] init];
-    [callUpdate setLocalizedCallerName:@"好友1"];
-    [callUpdate setHasVideo: NO];
-    CXHandle *calleeHandle = [[CXHandle alloc] initWithType:CXHandleTypeGeneric value:@"好友1"];
-    [callUpdate setRemoteHandle: calleeHandle];
-    [_provider reportNewIncomingCallWithUUID:[NSUUID UUID] update:callUpdate completion:^(NSError *error) {
-       [_provider reportCallWithUUID:<#(nonnull NSUUID *)#> endedAtDate:<#(nullable NSDate *)#> reason:<#(CXCallEndedReason)#>]
-    }];
+//    NSLog(@"Payload=%@", payloadDictionary);
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter postNotificationName:@"notificationIncomingPayload" object:nil userInfo:payloadDictionary];
 }
 
 #pragma mark - UISceneSession lifecycle
