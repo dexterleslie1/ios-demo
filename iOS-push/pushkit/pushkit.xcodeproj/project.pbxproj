@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22D5DB3C2491D02B00AEDB4E /* CallKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D5DB3A2491D01C00AEDB4E /* CallKit.framework */; };
 		22F2EF6023D97F4D00F63B06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EF5F23D97F4D00F63B06 /* AppDelegate.m */; };
 		22F2EF6323D97F4D00F63B06 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EF6223D97F4D00F63B06 /* SceneDelegate.m */; };
 		22F2EF6623D97F4D00F63B06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F2EF6523D97F4D00F63B06 /* ViewController.m */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22D5DB3A2491D01C00AEDB4E /* CallKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CallKit.framework; path = System/Library/Frameworks/CallKit.framework; sourceTree = SDKROOT; };
 		22F2EF5B23D97F4D00F63B06 /* pushkit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pushkit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F2EF5E23D97F4D00F63B06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22F2EF5F23D97F4D00F63B06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D5DB3C2491D02B00AEDB4E /* CallKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22D5DB392491D01C00AEDB4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22D5DB3A2491D01C00AEDB4E /* CallKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		22F2EF5223D97F4D00F63B06 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +100,7 @@
 				22F2EF7923D97F5300F63B06 /* pushkitTests */,
 				22F2EF8423D97F5300F63B06 /* pushkitUITests */,
 				22F2EF5C23D97F4D00F63B06 /* Products */,
+				22D5DB392491D01C00AEDB4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};

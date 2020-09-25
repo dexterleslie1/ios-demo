@@ -30,6 +30,7 @@
     NSString *currentTimeString = [formatter stringFromDate:currentTime];
     UNUserNotificationCenter *userNotificationCenter = [UNUserNotificationCenter currentNotificationCenter];
     UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.threadIdentifier
     content.title = @"通知标题";
     content.body = [NSString stringWithFormat:@"通知内容，时间 %@", currentTimeString];
     content.sound = [UNNotificationSound defaultSound];
