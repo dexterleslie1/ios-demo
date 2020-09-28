@@ -1,0 +1,26 @@
+//
+//  Proj.pch
+//  iOS-cocoalumberjack
+//
+//  Created by MacOS on 2020/9/28.
+//  Copyright © 2020 YingShun International Network Co., Limited. All rights reserved.
+//
+
+#ifndef Proj_pch
+#define Proj_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+    #import "DDLog.h"
+
+    #ifdef DEBUG
+        static const int ddLogLevel = LOG_LEVEL_DEBUG;
+    #else
+        static const int ddLogLevel = LOG_LEVEL_INFO;
+    #endif
+
+#endif
+
+#endif /* Proj_pch */
