@@ -13,7 +13,8 @@
 {
     AVAudioPlayer* _player;
 }
-- (void)startPlayer;
 
++ (id) sharedInstance;
+- (void)startPlayer;
 - (void)stopPlayer;
 @end

@@ -14,7 +14,6 @@
 @property(assign, nonatomic) NSTimer *nsTimer;
 @property(assign, nonatomic) int badge;
 @property(assign, nonatomic) UIBackgroundTaskIdentifier taskId;
-@property(strong, nonatomic) BackgroundPlayer *playerBackground;
 
 @end
 
@@ -37,10 +36,7 @@
         self.taskId = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
             if(self.taskId!=UIBackgroundTaskInvalid) {
                 // 启动无声音乐保活机制
-                if(self.playerBackground == nil) {
-                    self.playerBackground = [[BackgroundPlayer alloc] init];
-                }
-                [self.playerBackground startPlayer];
+                [[BackgroundPlayer sharedInstance] startPlayer];
                 
                 [[UIApplication sharedApplication] endBackgroundTask:self.taskId];
                 self.taskId = UIBackgroundTaskInvalid;
@@ -57,9 +53,7 @@
 
 - (void) onCancelBackgroundTaskEvent:(NSNotification *) notification {
     [self cancelBackgroundTask];
-    if(self.playerBackground) {
-        [self.playerBackground stopPlayer];
-    }
+    [[BackgroundPlayer sharedInstance] stopPlayer];
 }
 
 - (void) cancelBackgroundTask {
@@ -87,9 +81,7 @@
         [self.nsTimer invalidate];
     }
     
-    if(self.playerBackground) {
-        [self.playerBackground stopPlayer];
-    }
+    [[BackgroundPlayer sharedInstance] stopPlayer];
 }
 
 @end

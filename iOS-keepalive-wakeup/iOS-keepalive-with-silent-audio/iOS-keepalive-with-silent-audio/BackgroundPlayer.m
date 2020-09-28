@@ -10,12 +10,23 @@
 
 @implementation BackgroundPlayer
 
++ (id) sharedInstance {
+    static BackgroundPlayer *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (!instance) {
+            instance = [[self alloc] init];
+        }
+    });
+    return instance;
+}
+
 - (void)startPlayer {
     if (_player && [_player isPlaying]) {
         return;
     }
     AVAudioSession *session = [AVAudioSession sharedInstance];
-    [[AVAudioSession sharedInstance] setMode:AVAudioSessionModeDefault error:nil];
+//    [[AVAudioSession sharedInstance] setMode:AVAudioSessionModeDefault error:nil];
 
 //    NSString* route = [[[[[AVAudioSession sharedInstance] currentRoute] outputs] objectAtIndex:0] portType];
 //
@@ -28,7 +39,7 @@
 //            // Fallback on earlier versions
 //        }
 //    }else{
-        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayAndRecord
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback
                                          withOptions:(AVAudioSessionCategoryOptionMixWithOthers)
                                                error:nil];
 //    }
@@ -42,7 +53,7 @@
     _player.numberOfLoops = -1;
     BOOL ret = [_player play];
     if (!ret) {
-        NSLog(@"play failed,please turn on audio background mode");
+        NSLog(@"AVAudioSession category+categoryOption组合不正确，不能播放无声音乐");
     }
 }
 
@@ -53,7 +64,6 @@
         _player = nil;
         AVAudioSession *session = [AVAudioSession sharedInstance];
         [session setActive:NO error:nil];
-        NSLog(@"stop in play background success");
     }
 }
 
