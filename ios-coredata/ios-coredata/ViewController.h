@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StudentStorageManager.h"
 
 @interface ViewController : UIViewController
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		229166502526DDBF003B36CA /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2291664F2526DDBF003B36CA /* CoreDataManager.m */; };
 		5213BC3622AD563C00FDFA75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BC3522AD563C00FDFA75 /* main.m */; };
 		5213BC3922AD563C00FDFA75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BC3822AD563C00FDFA75 /* AppDelegate.m */; };
 		5213BC3C22AD563C00FDFA75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BC3B22AD563C00FDFA75 /* ViewController.m */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2291664E2526DDBF003B36CA /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		2291664F2526DDBF003B36CA /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		5213BC3122AD563C00FDFA75 /* ios-coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-coredata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5213BC3522AD563C00FDFA75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5213BC3722AD563C00FDFA75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -138,9 +141,12 @@
 		5213BC3322AD563C00FDFA75 /* ios-coredata */ = {
 			isa = PBXGroup;
 			children = (
-				5213BCD222AE266600FDFA75 /* storagemanager */,
+				5213BCD322AE269500FDFA75 /* StudentStorageManager.h */,
+				5213BCD422AE269500FDFA75 /* StudentStorageManager.m */,
 				5213BC3722AD563C00FDFA75 /* AppDelegate.h */,
 				5213BC3822AD563C00FDFA75 /* AppDelegate.m */,
+				2291664E2526DDBF003B36CA /* CoreDataManager.h */,
+				2291664F2526DDBF003B36CA /* CoreDataManager.m */,
 				5213BC3A22AD563C00FDFA75 /* ViewController.h */,
 				5213BC3B22AD563C00FDFA75 /* ViewController.m */,
 				5213BC3D22AD563C00FDFA75 /* Main.storyboard */,
@@ -178,15 +184,6 @@
 				5213BC5E22AD563D00FDFA75 /* Info.plist */,
 			);
 			path = "ios-coredataUITests";
-			sourceTree = "<group>";
-		};
-		5213BCD222AE266600FDFA75 /* storagemanager */ = {
-			isa = PBXGroup;
-			children = (
-				5213BCD322AE269500FDFA75 /* StudentStorageManager.h */,
-				5213BCD422AE269500FDFA75 /* StudentStorageManager.m */,
-			);
-			name = storagemanager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +272,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -328,6 +326,7 @@
 				5213BCCE22AE19D000FDFA75 /* Book+CoreDataProperties.m in Sources */,
 				5213BCC222ADF21D00FDFA75 /* Dog+CoreDataProperties.m in Sources */,
 				5213BC3922AD563C00FDFA75 /* AppDelegate.m in Sources */,
+				229166502526DDBF003B36CA /* CoreDataManager.m in Sources */,
 				5213BC4222AD563C00FDFA75 /* ios_coredata.xcdatamodeld in Sources */,
 				5213BCCD22AE19D000FDFA75 /* Book+CoreDataClass.m in Sources */,
 				5213BCCF22AE19D000FDFA75 /* Student+CoreDataClass.m in Sources */,
