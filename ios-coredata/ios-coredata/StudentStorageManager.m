@@ -108,34 +108,31 @@
     }];
 }
 
-- (void) testManagedObjectSharedBetweenThreads {
-    @synchronized (self) {
-        if(!self.singleMOC) {
-            self.singleMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
-            NSManagedObjectContext *rootContext = [[CoreDataManager sharedInstance] rootContext];
-            [self.singleMOC setParentContext: rootContext];
-            NSLog(@"首次初始化singleMOC");
-        }
-    }
-    
-     [self.singleMOC performBlock:^{
+- (void) testManagedObjectSharedBetweenThreads {    
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"读取数据线程 %@", [NSThread currentThread]);
+        NSManagedObjectContext *rootContext = [[CoreDataManager sharedInstance] rootContext];
+        NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+        [context setParentContext:rootContext];
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
-        NSArray *students = [self.singleMOC executeFetchRequest:fetchRequest error:nil];
-
-        // 另外一个MOC
+        fetchRequest.returnsObjectsAsFaults = NO;
+        self.studentSharedBetweenThreads = [context executeFetchRequest:fetchRequest error:nil];
+    });
+    // NOTE：到此加载studentSharedBetweenThreads的context已销毁，studentSharedBetweenThreads相当于CoreData fault对象
+    // 不能使用另外线程对其进行相关操作
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"修改数据线程 %@", [NSThread currentThread]);
+        
         NSManagedObjectContext *anotherMOC = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
         NSManagedObjectContext *rootContext = [[CoreDataManager sharedInstance] rootContext];
         [anotherMOC setParentContext: rootContext];
-        [anotherMOC performBlock:^{
-            NSLog(@"修改数据线程 %@", [NSThread currentThread]);
-            for(Student *student in students) {
-                student.name = @"newName";
-            }
-            [[CoreDataManager sharedInstance] saveContext: self.singleMOC];
-            NSLog(@"修改完毕");
-        }];
-    }];
+        for(Student *student in self.studentSharedBetweenThreads) {
+            student.name = @"newName";
+        }
+        [[CoreDataManager sharedInstance] saveContext:anotherMOC];
+        NSLog(@"修改完毕");
+    });
 }
 
 - (void) testTwoIndependentMOCInconsistent {
@@ -170,6 +167,40 @@
     fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
     long countFromContext2 = [context2 countForFetchRequest: fetchRequest error:nil];
     NSAssert(countFromContext2==countOrigin, @"意料之外错误");
+}
+
+- (void) testPerformBlockAndPerformBlockAndWait {
+    NSManagedObjectContext *contextMain = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    NSManagedObjectContext *rootContext = [[CoreDataManager sharedInstance] rootContext];
+    [contextMain setParentContext: rootContext];
+    [contextMain performBlockAndWait:^{
+        NSMutableArray<NSDictionary *> *students = [NSMutableArray array];
+        for(int i=0; i<10; i++) {
+            NSDictionary *dictionaryStudent = @{@"age": @(100+i), @"name":[NSString stringWithFormat:@"名称%d", i]};
+            [students addObject:dictionaryStudent];
+        }
+
+        for (NSDictionary *dictionaryStudent in students) {
+            Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:contextMain];
+            student.age = [[dictionaryStudent objectForKey:@"age"] intValue];
+            student.name   = [dictionaryStudent objectForKey:@"name"];
+        }
+        [[CoreDataManager sharedInstance] saveContext: contextMain];
+        NSLog(@"新增完毕");
+    }];
+    
+    NSManagedObjectContext *contextPrivate = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    [contextPrivate setParentContext: rootContext];
+    [contextPrivate performBlock:^{
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
+        NSArray *students1 = [contextPrivate executeFetchRequest:fetchRequest error:nil];
+        
+        for(Student *student in students1) {
+            student.name = @"newName";
+        }
+        [[CoreDataManager sharedInstance] saveContext: contextPrivate];
+        NSLog(@"修改完毕");
+    }];
 }
 
 @end

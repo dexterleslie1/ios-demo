@@ -28,7 +28,7 @@
 }
 
 - (void) onButtonInvokeClicked:(UIButton *) button {
-    [[StudentStorageManager sharedInstance] testSingleMOCSharedBetweenThreads];
+    [[StudentStorageManager sharedInstance] testManagedObjectSharedBetweenThreads];
 }
 
 - (void) onButtonLogClicked:(UIButton *) button {
