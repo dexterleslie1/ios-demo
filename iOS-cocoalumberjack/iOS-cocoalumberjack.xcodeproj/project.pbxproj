@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		223669F625395425004F5846 /* CustomLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 223669F525395425004F5846 /* CustomLogFormatter.m */; };
 		22B0E480252155AF000B8596 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0E47F252155AF000B8596 /* AppDelegate.m */; };
 		22B0E483252155AF000B8596 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0E482252155AF000B8596 /* SceneDelegate.m */; };
 		22B0E486252155AF000B8596 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B0E485252155AF000B8596 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		223669F425395425004F5846 /* CustomLogFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomLogFormatter.h; sourceTree = "<group>"; };
+		223669F525395425004F5846 /* CustomLogFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomLogFormatter.m; sourceTree = "<group>"; };
 		22B0E47B252155AF000B8596 /* iOS-cocoalumberjack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-cocoalumberjack.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B0E47E252155AF000B8596 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22B0E47F252155AF000B8596 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				22B0E48F252155B8000B8596 /* Info.plist */,
 				22B0E490252155B8000B8596 /* main.m */,
 				22B0E4B32521AAAD000B8596 /* Proj.pch */,
+				223669F425395425004F5846 /* CustomLogFormatter.h */,
+				223669F525395425004F5846 /* CustomLogFormatter.m */,
 			);
 			path = "iOS-cocoalumberjack";
 			sourceTree = "<group>";
@@ -323,6 +328,7 @@
 				22B0E480252155AF000B8596 /* AppDelegate.m in Sources */,
 				22B0E491252155B8000B8596 /* main.m in Sources */,
 				22B0E483252155AF000B8596 /* SceneDelegate.m in Sources */,
+				223669F625395425004F5846 /* CustomLogFormatter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

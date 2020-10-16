@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import "CustomLogFormatter.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -20,12 +20,15 @@
     
     // 初始化CocoaLumberjack
     // DDOSLogger会把日志输出到Xcode console和Console.app中
-    [DDLog addLogger:[DDOSLogger sharedInstance]];
+    DDOSLogger *osLogger = [DDOSLogger sharedInstance];
+    osLogger.logFormatter = [[CustomLogFormatter alloc] init];
+    [DDLog addLogger:osLogger];
 
     // 输出日志到文件中
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init];
     fileLogger.rollingFrequency = 60 * 60 * 24;
     fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    fileLogger.logFormatter = [[CustomLogFormatter alloc] init];
     [DDLog addLogger:fileLogger];
     
     // 日志文件所在目录
