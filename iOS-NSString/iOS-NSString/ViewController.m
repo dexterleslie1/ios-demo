@@ -23,6 +23,12 @@
     NSRange range = [sipAccountUri rangeOfString:@"@"];
     NSString *registerUri = [sipAccountUri substringFromIndex:range.location+range.length];
     NSAssert([registerUri isEqualToString:@"192.168.1.66:5060"], @"意料之外错误");
+    
+    // 字符串padding
+    NSString *someString = @"1234";
+    NSString *padded = [someString stringByPaddingToLength:8 withString:@" " startingAtIndex:0];
+    NSLog(@"[%@]", someString);
+    NSLog(@"[%@]", padded);
 }
 
 
