@@ -18,6 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // home目录路径
+    NSString *homeDirectory = NSHomeDirectory();
+    NSLog(@"home目录路径为 %@", homeDirectory);
+    
     // xxx.app目录路径
     NSString *bundlePath = [[NSBundle mainBundle] bundlePath];
     NSLog(@"xxx.app目录路径为 %@", bundlePath);
