@@ -28,7 +28,7 @@
  */
 - (void) testSingleMOCSharedBetweenThreads;
 /**
- 错误用法，演示ManagedObject在线程之间共享，连续调用此函数会预期出现错误
+ 错误用法，演示ManagedObject在线程之间共享
  */
 - (void) testManagedObjectSharedBetweenThreads;
 /**
@@ -40,4 +40,13 @@
  结果并发没有问题，只是main MOC会导致UI卡顿，不会阻塞其他线程执行
  */
 - (void) testPerformBlockAndPerformBlockAndWait;
+/**
+ 测试多个MOC共享一个父级MOC
+ */
+- (void) testMultipleMOCsWithCommonParentContext;
+
+/**
+ 测试student升级添加版本字段
+ */
+- (void) testStudentUpgradeWithNewFieldVersion;
 @end

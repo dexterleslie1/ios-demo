@@ -28,7 +28,7 @@
 }
 
 - (void) saveContext:(NSManagedObjectContext *) context {
-    [context performBlock:^{
+    [context performBlockAndWait:^{
         if(!context) {
             return;
         }
@@ -65,9 +65,14 @@
             NSURL *storeURL         = [NSURL fileURLWithPath:[documentPath stringByAppendingPathComponent:@"coredata-demo.sqlite"]];
             NSLog(@"sql文件位置 %@", storeURL);
             NSError *error            = nil;
+            NSDictionary *optionsDictionary = [NSDictionary dictionaryWithObjectsAndKeys: [NSNumber numberWithBool:YES]
+                                                                                           ,NSMigratePersistentStoresAutomaticallyOption
+                                                                                           ,[NSNumber numberWithBool:YES]
+                                                                                           ,NSInferMappingModelAutomaticallyOption
+                                                                                           ,nil];
             [self.persistentStoreCoordinatorInternal addPersistentStoreWithType:NSSQLiteStoreType
                                                           configuration:nil URL:storeURL
-                                                                options:nil
+                                                                options:optionsDictionary
                                                                   error:&error];
             NSAssert(!error, @"调用addPersistentStoreWithType失败，原因%@", error);
         }

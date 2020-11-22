@@ -2,9 +2,9 @@
 //  Student+CoreDataProperties.h
 //  ios-coredata
 //
-//  Created by john on 19/6/10.
-//  Copyright © 2019年 future. All rights reserved.
-//  This file was automatically generated and should not be edited.
+//  Created by MacOS on 2020/11/22.
+//  Copyright © 2020 future. All rights reserved.
+//
 //
 
 #import "Student+CoreDataClass.h"
@@ -16,8 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<Student *> *)fetchRequest;
 
-@property (nullable, nonatomic, copy) NSString *name;
 @property (nonatomic) int32_t age;
+@property (nullable, nonatomic, copy) NSString *name;
+@property (nonatomic) int32_t version;
 @property (nullable, nonatomic, retain) NSSet<Book *> *books;
 
 @end

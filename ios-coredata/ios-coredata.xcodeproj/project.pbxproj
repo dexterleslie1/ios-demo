@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		223AA607256A35F100CD117C /* ios_coredata2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ios_coredata2.xcdatamodel; sourceTree = "<group>"; };
 		2291664E2526DDBF003B36CA /* CoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
 		2291664F2526DDBF003B36CA /* CoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
 		5213BC3122AD563C00FDFA75 /* ios-coredata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-coredata.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -590,9 +591,10 @@
 		5213BC4022AD563C00FDFA75 /* ios_coredata.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				223AA607256A35F100CD117C /* ios_coredata2.xcdatamodel */,
 				5213BC4122AD563C00FDFA75 /* ios_coredata.xcdatamodel */,
 			);
-			currentVersion = 5213BC4122AD563C00FDFA75 /* ios_coredata.xcdatamodel */;
+			currentVersion = 223AA607256A35F100CD117C /* ios_coredata2.xcdatamodel */;
 			path = ios_coredata.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -2,9 +2,9 @@
 //  Student+CoreDataProperties.m
 //  ios-coredata
 //
-//  Created by john on 19/6/10.
-//  Copyright © 2019年 future. All rights reserved.
-//  This file was automatically generated and should not be edited.
+//  Created by MacOS on 2020/11/22.
+//  Copyright © 2020 future. All rights reserved.
+//
 //
 
 #import "Student+CoreDataProperties.h"
@@ -12,11 +12,12 @@
 @implementation Student (CoreDataProperties)
 
 + (NSFetchRequest<Student *> *)fetchRequest {
-	return [[NSFetchRequest alloc] initWithEntityName:@"Student"];
+	return [NSFetchRequest fetchRequestWithEntityName:@"Student"];
 }
 
-@dynamic name;
 @dynamic age;
+@dynamic name;
+@dynamic version;
 @dynamic books;
 
 @end

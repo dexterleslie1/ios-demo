@@ -13,7 +13,7 @@
 
 @implementation StudentStorageManager
 
-+ (id)sharedInstance {
++ (StudentStorageManager *)sharedInstance {
     static StudentStorageManager *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -23,23 +23,6 @@
     });
     return instance;
 }
-
-//- (void)fetchAndDisplay {
-//    NSManagedObjectContext *context = [[CoreDataManager sharedInstance] rootContextInternal];
-//    NSFetchRequest * request = [NSFetchRequest fetchRequestWithEntityName: @"Student"];
-//    NSArray * students = [context executeFetchRequest: request error: nil];
-//    if(students.count > 0) {
-//        for(Student * student in students) {
-//            NSLog(@"Student [name=%@,age=%d]", student.name, student.age);
-//            NSSet * books = student.books;
-//            for(Book * book in books) {
-//                NSLog(@"Book [title=%@,price=%f]", book.title, book.price);
-//            }
-//        }
-//    }else {
-//        NSLog(@"No students found");
-//    }
-//}
 
 - (void) testCorrectUsage {
     NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
@@ -201,6 +184,68 @@
         [[CoreDataManager sharedInstance] saveContext: contextPrivate];
         NSLog(@"修改完毕");
     }];
+}
+
+- (void) testMultipleMOCsWithCommonParentContext {
+    long totalCount = 10000;
+    NSManagedObjectContext *rootContext = [[CoreDataManager sharedInstance] rootContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
+    long countOrigin = [rootContext countForFetchRequest: fetchRequest error:nil];
+    
+    dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        NSManagedObjectContext *rootContext = [[CoreDataManager sharedInstance] rootContext];
+        NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        [context setParentContext:rootContext];
+        
+        NSMutableArray<NSDictionary *> *students = [NSMutableArray array];
+        for(int i=0; i<totalCount; i++) {
+            NSDictionary *dictionaryStudent = @{@"age": @(100+i), @"name":[NSString stringWithFormat:@"名称%d", i]};
+            [students addObject:dictionaryStudent];
+        }
+
+//    [context performBlockAndWait:^{
+        for (NSDictionary *dictionaryStudent in students) {
+            Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:context];
+            student.age = [[dictionaryStudent objectForKey:@"age"] intValue];
+            student.name   = [dictionaryStudent objectForKey:@"name"];
+        }
+        [[CoreDataManager sharedInstance] saveContext: context];
+        NSLog(@"新增完毕");
+//    }];
+    });
+    
+    NSManagedObjectContext *contextMain = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    [contextMain setParentContext:rootContext];
+    fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
+    long countCurrent = [contextMain countForFetchRequest: fetchRequest error:nil];
+    NSAssert(countOrigin+totalCount==countCurrent, @"预料之外错误 countOrigin=%ld,countCurrent=%ld", countOrigin, countCurrent);
+}
+
+- (void) testStudentUpgradeWithNewFieldVersion {
+    NSManagedObjectContext *rootContext = [[CoreDataManager sharedInstance] rootContext];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Student"];
+    
+    // 判断是否有student数据
+    long count = [rootContext countForFetchRequest:fetchRequest error:nil];
+    if(count<=0) {
+        NSMutableArray<NSDictionary *> *students = [NSMutableArray array];
+        for(int i=0; i<10; i++) {
+            NSDictionary *dictionaryStudent = @{@"age": @(100+i), @"name":[NSString stringWithFormat:@"名称%d", i]};
+            [students addObject:dictionaryStudent];
+        }
+        
+        for (NSDictionary *dictionaryStudent in students) {
+            Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:rootContext];
+            student.age = [[dictionaryStudent objectForKey:@"age"] intValue];
+            student.name   = [dictionaryStudent objectForKey:@"name"];
+        }
+    }
+    
+    NSError *error;
+    NSArray<Student *> *students = [rootContext executeFetchRequest:fetchRequest error: &error];
+    NSLog(@"%@", students[0].name);
+    
+    [[CoreDataManager sharedInstance] saveContext: rootContext];
 }
 
 @end
