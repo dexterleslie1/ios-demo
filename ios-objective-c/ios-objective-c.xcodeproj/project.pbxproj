@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		22AD3AA223B3232D007240BC /* ClassStaticMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AD3AA123B3232D007240BC /* ClassStaticMethod.m */; };
+		22C47F1C256BAF5B0052DC85 /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C47F1B256BAF5B0052DC85 /* ClassA.m */; };
+		22C47F1F256BAFC90052DC85 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C47F1E256BAFC90052DC85 /* ClassB.m */; };
+		22C6A051256B5C9900D90C9D /* FISClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C6A050256B5C9900D90C9D /* FISClass.m */; };
+		22C6A054256B5CD700D90C9D /* FISPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C6A053256B5CD700D90C9D /* FISPerson.m */; };
 		5213BBB122A90F4B00FDFA75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BBB022A90F4B00FDFA75 /* main.m */; };
 		5213BBB422A90F4B00FDFA75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BBB322A90F4B00FDFA75 /* AppDelegate.m */; };
 		5213BBB722A90F4B00FDFA75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213BBB622A90F4B00FDFA75 /* ViewController.m */; };
@@ -39,6 +43,14 @@
 /* Begin PBXFileReference section */
 		22AD3AA023B3232D007240BC /* ClassStaticMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassStaticMethod.h; sourceTree = "<group>"; };
 		22AD3AA123B3232D007240BC /* ClassStaticMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassStaticMethod.m; sourceTree = "<group>"; };
+		22C47F1A256BAF5B0052DC85 /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
+		22C47F1B256BAF5B0052DC85 /* ClassA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassA.m; sourceTree = "<group>"; };
+		22C47F1D256BAFC90052DC85 /* ClassB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassB.h; sourceTree = "<group>"; };
+		22C47F1E256BAFC90052DC85 /* ClassB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassB.m; sourceTree = "<group>"; };
+		22C6A04F256B5C9900D90C9D /* FISClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FISClass.h; sourceTree = "<group>"; };
+		22C6A050256B5C9900D90C9D /* FISClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FISClass.m; sourceTree = "<group>"; };
+		22C6A052256B5CD700D90C9D /* FISPerson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FISPerson.h; sourceTree = "<group>"; };
+		22C6A053256B5CD700D90C9D /* FISPerson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FISPerson.m; sourceTree = "<group>"; };
 		5213BBAC22A90F4B00FDFA75 /* ios-objective-c.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-objective-c.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5213BBB022A90F4B00FDFA75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5213BBB222A90F4B00FDFA75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -84,6 +96,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22C47F19256BAEFC0052DC85 /* Inherit */ = {
+			isa = PBXGroup;
+			children = (
+				22C47F1A256BAF5B0052DC85 /* ClassA.h */,
+				22C47F1B256BAF5B0052DC85 /* ClassA.m */,
+				22C47F1D256BAFC90052DC85 /* ClassB.h */,
+				22C47F1E256BAFC90052DC85 /* ClassB.m */,
+			);
+			path = Inherit;
+			sourceTree = "<group>";
+		};
+		22C6A04E256B5C1900D90C9D /* Initializer */ = {
+			isa = PBXGroup;
+			children = (
+				22C6A04F256B5C9900D90C9D /* FISClass.h */,
+				22C6A050256B5C9900D90C9D /* FISClass.m */,
+				22C6A052256B5CD700D90C9D /* FISPerson.h */,
+				22C6A053256B5CD700D90C9D /* FISPerson.m */,
+			);
+			path = Initializer;
+			sourceTree = "<group>";
+		};
 		5213BBA322A90F4B00FDFA75 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +141,8 @@
 		5213BBAE22A90F4B00FDFA75 /* ios-objective-c */ = {
 			isa = PBXGroup;
 			children = (
+				22C47F19256BAEFC0052DC85 /* Inherit */,
+				22C6A04E256B5C1900D90C9D /* Initializer */,
 				5213BBE222A9134A00FDFA75 /* personclass */,
 				5213BBB222A90F4B00FDFA75 /* AppDelegate.h */,
 				5213BBB322A90F4B00FDFA75 /* AppDelegate.m */,
@@ -244,6 +280,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -292,9 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5213BBB722A90F4B00FDFA75 /* ViewController.m in Sources */,
+				22C6A051256B5C9900D90C9D /* FISClass.m in Sources */,
+				22C47F1C256BAF5B0052DC85 /* ClassA.m in Sources */,
+				22C47F1F256BAFC90052DC85 /* ClassB.m in Sources */,
 				5213BBB422A90F4B00FDFA75 /* AppDelegate.m in Sources */,
 				22AD3AA223B3232D007240BC /* ClassStaticMethod.m in Sources */,
 				5213BBE522A9139600FDFA75 /* Person.m in Sources */,
+				22C6A054256B5CD700D90C9D /* FISPerson.m in Sources */,
 				5213BBB122A90F4B00FDFA75 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

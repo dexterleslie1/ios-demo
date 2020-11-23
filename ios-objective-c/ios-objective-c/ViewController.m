@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import "Person.h"
 #import "ClassStaticMethod.h"
+#import "FISPerson.h"
+#import "FISClass.h"
+#import "ClassA.h"
+#import "ClassB.h"
 
 @interface ViewController ()
 
@@ -19,6 +23,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // 构造和析构函数测试
+    FISPerson *zachDrossman = [[FISPerson alloc] initWithName:@"Zach Drossman"];
+    FISPerson *markMurray = [[FISPerson alloc] initWithName:@"Mark Murray"];
+    FISPerson *anishKumar = [[FISPerson alloc] initWithName:@"Anish Kumar"];
+    FISClass *class = [[FISClass alloc] initWithName:@"004"
+                                          roomNumber:@4
+                                          instructor:zachDrossman
+                                            students:@[markMurray, anishKumar]];
+    NSLog(@"FISClass 004: %@", class);
+    
+    class = [FISClass classWithName:@"005" roomNumber:@5 instructor:zachDrossman students:@[anishKumar, markMurray]];
+    NSLog(@"FISClass 005: %@", class);
+    
+    // 派生、重写
+    ClassA *classA = [[ClassA alloc] initWithName:@"ClassA实例"];
+    NSString *result = [classA toString];
+    NSLog(@"ClassA to String: %@", result);
+    
+    ClassA *classB = [[ClassB alloc] initWithName:@"ClassB实例" withAge:10];
+    result = [classB toString];
+    NSLog(@"ClassB to String: %@", result);
     
     Person *person = [[Person alloc] init];
     person.name = @"姓名";
