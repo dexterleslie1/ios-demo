@@ -13,6 +13,9 @@
 #import "FISClass.h"
 #import "ClassA.h"
 #import "ClassB.h"
+#import "StaticClass1.h"
+#import "StaticClass1Sub1.h"
+#import "StaticVariableClass1.h"
 
 @interface ViewController ()
 
@@ -45,6 +48,16 @@
     ClassA *classB = [[ClassB alloc] initWithName:@"ClassB实例" withAge:10];
     result = [classB toString];
     NSLog(@"ClassB to String: %@", result);
+    
+    // 静态+initialize、+load方法演示
+    StaticClass1 *staticClass1 = [[StaticClass1 alloc] init];
+    StaticClass1Sub1 *staticClass1Sub1 = [[StaticClass1Sub1 alloc] init];
+    
+    // 静态变量演示
+    NSNumber *counterTemporary = StaticVariableClass1.getStaticVariable;
+    NSLog(@"第一次静态变量counter=%d", [counterTemporary intValue]);
+    counterTemporary = StaticVariableClass1.getStaticVariable;
+    NSLog(@"第二次静态变量counter=%d", [counterTemporary intValue]);
     
     Person *person = [[Person alloc] init];
     person.name = @"姓名";

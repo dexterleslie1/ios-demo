@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		226288F4256CA3C600174552 /* StaticClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = 226288F3256CA3C600174552 /* StaticClass1.m */; };
+		226288F7256CA48C00174552 /* StaticClass2.m in Sources */ = {isa = PBXBuildFile; fileRef = 226288F6256CA48C00174552 /* StaticClass2.m */; };
+		226288FA256CA7EF00174552 /* StaticClass1Sub1.m in Sources */ = {isa = PBXBuildFile; fileRef = 226288F9256CA7EF00174552 /* StaticClass1Sub1.m */; };
+		226288FD256CB05400174552 /* StaticVariableClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = 226288FC256CB05400174552 /* StaticVariableClass1.m */; };
 		22AD3AA223B3232D007240BC /* ClassStaticMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AD3AA123B3232D007240BC /* ClassStaticMethod.m */; };
 		22C47F1C256BAF5B0052DC85 /* ClassA.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C47F1B256BAF5B0052DC85 /* ClassA.m */; };
 		22C47F1F256BAFC90052DC85 /* ClassB.m in Sources */ = {isa = PBXBuildFile; fileRef = 22C47F1E256BAFC90052DC85 /* ClassB.m */; };
@@ -41,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		226288F2256CA3C600174552 /* StaticClass1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticClass1.h; sourceTree = "<group>"; };
+		226288F3256CA3C600174552 /* StaticClass1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticClass1.m; sourceTree = "<group>"; };
+		226288F5256CA48C00174552 /* StaticClass2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticClass2.h; sourceTree = "<group>"; };
+		226288F6256CA48C00174552 /* StaticClass2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticClass2.m; sourceTree = "<group>"; };
+		226288F8256CA7EF00174552 /* StaticClass1Sub1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticClass1Sub1.h; sourceTree = "<group>"; };
+		226288F9256CA7EF00174552 /* StaticClass1Sub1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticClass1Sub1.m; sourceTree = "<group>"; };
+		226288FB256CB05400174552 /* StaticVariableClass1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StaticVariableClass1.h; sourceTree = "<group>"; };
+		226288FC256CB05400174552 /* StaticVariableClass1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StaticVariableClass1.m; sourceTree = "<group>"; };
 		22AD3AA023B3232D007240BC /* ClassStaticMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassStaticMethod.h; sourceTree = "<group>"; };
 		22AD3AA123B3232D007240BC /* ClassStaticMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ClassStaticMethod.m; sourceTree = "<group>"; };
 		22C47F1A256BAF5B0052DC85 /* ClassA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClassA.h; sourceTree = "<group>"; };
@@ -96,6 +108,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		226288F1256CA32E00174552 /* Static */ = {
+			isa = PBXGroup;
+			children = (
+				226288F2256CA3C600174552 /* StaticClass1.h */,
+				226288F3256CA3C600174552 /* StaticClass1.m */,
+				226288F5256CA48C00174552 /* StaticClass2.h */,
+				226288F6256CA48C00174552 /* StaticClass2.m */,
+				226288F8256CA7EF00174552 /* StaticClass1Sub1.h */,
+				226288F9256CA7EF00174552 /* StaticClass1Sub1.m */,
+				226288FB256CB05400174552 /* StaticVariableClass1.h */,
+				226288FC256CB05400174552 /* StaticVariableClass1.m */,
+			);
+			path = Static;
+			sourceTree = "<group>";
+		};
 		22C47F19256BAEFC0052DC85 /* Inherit */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +168,7 @@
 		5213BBAE22A90F4B00FDFA75 /* ios-objective-c */ = {
 			isa = PBXGroup;
 			children = (
+				226288F1256CA32E00174552 /* Static */,
 				22C47F19256BAEFC0052DC85 /* Inherit */,
 				22C6A04E256B5C1900D90C9D /* Initializer */,
 				5213BBE222A9134A00FDFA75 /* personclass */,
@@ -330,10 +358,14 @@
 			files = (
 				5213BBB722A90F4B00FDFA75 /* ViewController.m in Sources */,
 				22C6A051256B5C9900D90C9D /* FISClass.m in Sources */,
+				226288FD256CB05400174552 /* StaticVariableClass1.m in Sources */,
 				22C47F1C256BAF5B0052DC85 /* ClassA.m in Sources */,
+				226288FA256CA7EF00174552 /* StaticClass1Sub1.m in Sources */,
 				22C47F1F256BAFC90052DC85 /* ClassB.m in Sources */,
+				226288F4256CA3C600174552 /* StaticClass1.m in Sources */,
 				5213BBB422A90F4B00FDFA75 /* AppDelegate.m in Sources */,
 				22AD3AA223B3232D007240BC /* ClassStaticMethod.m in Sources */,
+				226288F7256CA48C00174552 /* StaticClass2.m in Sources */,
 				5213BBE522A9139600FDFA75 /* Person.m in Sources */,
 				22C6A054256B5CD700D90C9D /* FISPerson.m in Sources */,
 				5213BBB122A90F4B00FDFA75 /* main.m in Sources */,

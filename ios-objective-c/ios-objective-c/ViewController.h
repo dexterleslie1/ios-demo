@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class StaticClass1;
+@class StaticClass1Sub1;
+@class StaticVariableClass1;
+
 @interface ViewController : UIViewController
 
 
