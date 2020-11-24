@@ -35,14 +35,23 @@
     
     for(int i=0; i<10; i++) {
         [operation addExecutionBlock:^{
-            BOOL isLocked = [lock tryLock];
-            if(!isLocked) {
-                NSLog(@"线程%@尝试获取锁失败", [NSThread currentThread]);
-                return;
-            } else {
+            BOOL acquireLock = NO;
+            @try {
+                acquireLock = [lock tryLock];
+                if(!acquireLock) {
+                    NSLog(@"线程%@尝试获取锁失败", [NSThread currentThread]);
+                    return;
+                }
+                
                 NSLog(@"线程%@尝试获取锁成功", [NSThread currentThread]);
                 [NSThread sleepForTimeInterval:1.5];
                 [lock unlock];
+            }@catch(NSException *ex) {
+                //
+            }@finally {
+                if(acquireLock) {
+                    [lock unlock];
+                }
             }
         }];
     }
