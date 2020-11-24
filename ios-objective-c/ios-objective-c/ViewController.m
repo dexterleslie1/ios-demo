@@ -16,6 +16,7 @@
 #import "StaticClass1.h"
 #import "StaticClass1Sub1.h"
 #import "StaticVariableClass1.h"
+#import "ConstantClass.h"
 
 @interface ViewController ()
 
@@ -58,6 +59,9 @@
     NSLog(@"第一次静态变量counter=%d", [counterTemporary intValue]);
     counterTemporary = StaticVariableClass1.getStaticVariable;
     NSLog(@"第二次静态变量counter=%d", [counterTemporary intValue]);
+    
+    // 常量演示
+    NSLog(@"GATEWAY_TYPE_API=%@", GATEWAY_TYPE_API);
     
     Person *person = [[Person alloc] init];
     person.name = @"姓名";
