@@ -57,12 +57,9 @@
 //已经连接到服务器
 - (void) socket:(GCDAsyncSocket *) socket didConnectToHost:(nonnull NSString *) host port:(uint16_t) port{
     NSString *uuidFound = nil;
-    for(NSString *uuid in [self.identifierToSockets allKeys]) {
-        GCDAsyncSocket *socketTemporary = [self.identifierToSockets objectForKey:uuid];
-        if(socketTemporary==socket) {
-            uuidFound = uuid;
-            break;
-        }
+    NSArray<NSString *> *keys = [self.identifierToSockets allKeysForObject:socket];
+    if(keys && keys.count>0) {
+        uuidFound = keys[0];
     }
     
     if(uuidFound) {
