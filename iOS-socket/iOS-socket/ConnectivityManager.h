@@ -13,8 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ConnectivityManager : NSObject<GCDAsyncSocketDelegate>
 
-@property(nonatomic, strong) NSMutableDictionary<NSString *,NSMutableArray<dispatch_semaphore_t> *> *identifierToSemaphores;
+@property(nonatomic, strong) NSMutableDictionary<NSString *,dispatch_semaphore_t> *identifierToSemaphores;
 @property(nonatomic, strong) NSMutableDictionary<NSString *,NSNumber *> *socketToReachable;
+@property(nonatomic, strong) NSMutableDictionary<NSString *,GCDAsyncSocket *> *identifierToSockets;
 
 + (ConnectivityManager *) sharedInstance;
 

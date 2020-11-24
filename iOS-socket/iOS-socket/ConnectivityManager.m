@@ -9,8 +9,6 @@
 #import "ConnectivityManager.h"
 
 @implementation ConnectivityManager
-int counter1;
-int counter2;
 
 + (ConnectivityManager *) sharedInstance {
     static ConnectivityManager *instance = nil;
@@ -20,6 +18,7 @@ int counter2;
             instance = [[self alloc] init];
             instance.identifierToSemaphores = [[NSMutableDictionary alloc] init];
             instance.socketToReachable = [[NSMutableDictionary alloc] init];
+            instance.identifierToSockets = [[NSMutableDictionary alloc] init];
         }
     });
     return instance;
@@ -30,45 +29,48 @@ int counter2;
     dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
     GCDAsyncSocket *socket= [[GCDAsyncSocket alloc] initWithDelegate:self delegateQueue:queue];
     
-    NSString *identifier = [NSString stringWithFormat:@"%@:%d", host, port];
-    if(![self.identifierToSemaphores objectForKey:identifier]) {
-        NSMutableArray<dispatch_semaphore_t> *semaphores = [[NSMutableArray alloc] init];
-        [self.identifierToSemaphores setObject:semaphores forKey:identifier];
-    }
+    NSString *uuid = [[NSUUID UUID] UUIDString];
+    [self.identifierToSockets setObject:socket forKey:uuid];
     
     NSError *error;
     [socket connectToHost:host onPort:port withTimeout:4.5 error:&error];
     
-    NSMutableArray<dispatch_semaphore_t> *semaphores = [self.identifierToSemaphores objectForKey:identifier];
-    [semaphores addObject:sema];
+    [self.identifierToSemaphores setObject:sema forKey:uuid];
     
     if(error) {
         NSLog(@"连接主机：%@，端口：%d 时出错，原因：%@", host, port, error);
-        [semaphores removeObject:sema];
+        [self.identifierToSemaphores removeObjectForKey:uuid];
+        [self.identifierToSockets removeObjectForKey:uuid];
+        [self.socketToReachable removeObjectForKey:uuid];
         return false;
     }
     
     dispatch_semaphore_wait(sema, dispatch_time(DISPATCH_TIME_NOW, 5*NSEC_PER_SEC));
     
-    [semaphores removeObject:sema];
-    BOOL reachable = [self.socketToReachable objectForKey:identifier];
-    if(!semaphores || semaphores.count<=0) {
-        [self.socketToReachable removeObjectForKey:identifier];
-    }
+    [self.identifierToSockets removeObjectForKey:uuid];
+    [self.identifierToSemaphores removeObjectForKey:uuid];
+    BOOL reachable = [self.socketToReachable objectForKey:uuid];
+    [self.socketToReachable removeObjectForKey:uuid];
     return reachable;
 }
 
 //已经连接到服务器
 - (void) socket:(GCDAsyncSocket *) socket didConnectToHost:(nonnull NSString *) host port:(uint16_t) port{
-    NSString *identifier = [NSString stringWithFormat:@"%@:%d", host, port];
-    [self.socketToReachable setObject:@YES forKey:identifier];
-    NSMutableArray<dispatch_semaphore_t> *semaphores = [self.identifierToSemaphores objectForKey:identifier];
-    if(semaphores && semaphores.count>0) {
-        for(int i=0; i<semaphores.count; i++) {
-            dispatch_semaphore_t sema = semaphores[i];
-            if(sema) {
-                dispatch_semaphore_signal(sema);
-            }
+    NSString *uuidFound = nil;
+    for(NSString *uuid in [self.identifierToSockets allKeys]) {
+        GCDAsyncSocket *socketTemporary = [self.identifierToSockets objectForKey:uuid];
+        if(socketTemporary==socket) {
+            uuidFound = uuid;
+            break;
+        }
+    }
+    
+    if(uuidFound) {
+        NSString *identifier = uuidFound;
+        [self.socketToReachable setObject:@YES forKey:identifier];
+        dispatch_semaphore_t sema = [self.identifierToSemaphores objectForKey:identifier];
+        if(sema) {
+            dispatch_semaphore_signal(sema);
         }
     }
 }
