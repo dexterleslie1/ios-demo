@@ -11,6 +11,7 @@
 #import "AutolayoutViewController.h"
 #import "Autolayout2ViewController.h"
 #import "AutolayoutXibViewController.h"
+#import "MasonryViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,13 +24,14 @@
     // Override point for customization after application launch.
     
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor redColor];
+    self.window.backgroundColor = [UIColor whiteColor];
 //    UIViewController *viewController = [[XibViewController alloc] initWithNibName:@"XibViewController"
 //                                                                            bundle:[NSBundle mainBundle]];
 //    UIViewController *viewController = [[Autolayout2ViewController alloc] initWithNibName:@"Autolayout2ViewController"
 //                                                                                  bundle:[NSBundle mainBundle]];
-    UIViewController *viewController = [[AutolayoutXibViewController alloc] initWithNibName:@"AutolayoutXibViewController"
-                                                                                     bundle:[NSBundle mainBundle]];
+//    UIViewController *viewController = [[AutolayoutXibViewController alloc] initWithNibName:@"AutolayoutXibViewController"
+//                                                                                     bundle:[NSBundle mainBundle]];
+    UIViewController *viewController = [[MasonryViewController alloc] init];
     self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     

@@ -11,6 +11,7 @@
 		2263D0F32572643C00BA8590 /* Autolayout2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2263D0F12572643C00BA8590 /* Autolayout2ViewController.xib */; };
 		2264006E25727B5E00AC768B /* AutolayoutXibViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264006C25727B5D00AC768B /* AutolayoutXibViewController.m */; };
 		2264006F25727B5E00AC768B /* AutolayoutXibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2264006D25727B5D00AC768B /* AutolayoutXibViewController.xib */; };
+		2264007225728E1B00AC768B /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2264007125728E1B00AC768B /* MasonryViewController.m */; };
 		22E557D32572347F00998C86 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E557D22572347F00998C86 /* AppDelegate.m */; };
 		22E557D92572347F00998C86 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E557D82572347F00998C86 /* ViewController.m */; };
 		22E557DE2572348300998C86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22E557DD2572348300998C86 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		22E5584D25723A1E00998C86 /* XibViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5584C25723A1E00998C86 /* XibViewController.xib */; };
 		22E5585125723D5200998C86 /* AutolayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E5584F25723D5200998C86 /* AutolayoutViewController.m */; };
 		22E5585225723D5200998C86 /* AutolayoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E5585025723D5200998C86 /* AutolayoutViewController.xib */; };
+		4BBD9447E22AE448B133DFB8 /* libPods-iOS-layout.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 838E329E82F9D0A23CC00C43 /* libPods-iOS-layout.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2264006B25727B5D00AC768B /* AutolayoutXibViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutolayoutXibViewController.h; sourceTree = "<group>"; };
 		2264006C25727B5D00AC768B /* AutolayoutXibViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutolayoutXibViewController.m; sourceTree = "<group>"; };
 		2264006D25727B5D00AC768B /* AutolayoutXibViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutolayoutXibViewController.xib; sourceTree = "<group>"; };
+		2264007025728E1B00AC768B /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
+		2264007125728E1B00AC768B /* MasonryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		22E557CE2572347F00998C86 /* iOS-layout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-layout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22E557D12572347F00998C86 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		22E557D22572347F00998C86 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,6 +71,9 @@
 		22E5584E25723D5200998C86 /* AutolayoutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutolayoutViewController.h; sourceTree = "<group>"; };
 		22E5584F25723D5200998C86 /* AutolayoutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AutolayoutViewController.m; sourceTree = "<group>"; };
 		22E5585025723D5200998C86 /* AutolayoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AutolayoutViewController.xib; sourceTree = "<group>"; };
+		3FE832FCBEC4054B748C74B0 /* Pods-iOS-layout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-layout.release.xcconfig"; path = "Target Support Files/Pods-iOS-layout/Pods-iOS-layout.release.xcconfig"; sourceTree = "<group>"; };
+		709A7060D50B1096D0E01533 /* Pods-iOS-layout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-layout.debug.xcconfig"; path = "Target Support Files/Pods-iOS-layout/Pods-iOS-layout.debug.xcconfig"; sourceTree = "<group>"; };
+		838E329E82F9D0A23CC00C43 /* libPods-iOS-layout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-layout.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BBD9447E22AE448B133DFB8 /* libPods-iOS-layout.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +109,8 @@
 				22E557EC2572348400998C86 /* iOS-layoutTests */,
 				22E557F72572348400998C86 /* iOS-layoutUITests */,
 				22E557CF2572347F00998C86 /* Products */,
+				CB8754A28018552DCFFC7D5E /* Pods */,
+				3009132978351E8080BB0BC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +146,8 @@
 				2264006B25727B5D00AC768B /* AutolayoutXibViewController.h */,
 				2264006C25727B5D00AC768B /* AutolayoutXibViewController.m */,
 				2264006D25727B5D00AC768B /* AutolayoutXibViewController.xib */,
+				2264007025728E1B00AC768B /* MasonryViewController.h */,
+				2264007125728E1B00AC768B /* MasonryViewController.m */,
 			);
 			path = "iOS-layout";
 			sourceTree = "<group>";
@@ -158,6 +170,23 @@
 			path = "iOS-layoutUITests";
 			sourceTree = "<group>";
 		};
+		3009132978351E8080BB0BC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				838E329E82F9D0A23CC00C43 /* libPods-iOS-layout.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB8754A28018552DCFFC7D5E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				709A7060D50B1096D0E01533 /* Pods-iOS-layout.debug.xcconfig */,
+				3FE832FCBEC4054B748C74B0 /* Pods-iOS-layout.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22E557FD2572348400998C86 /* Build configuration list for PBXNativeTarget "iOS-layout" */;
 			buildPhases = (
+				A67263A2056A1AEEC8932610 /* [CP] Check Pods Manifest.lock */,
 				22E557CA2572347F00998C86 /* Sources */,
 				22E557CB2572347F00998C86 /* Frameworks */,
 				22E557CC2572347F00998C86 /* Resources */,
@@ -285,6 +315,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A67263A2056A1AEEC8932610 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-layout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22E557CA2572347F00998C86 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -292,6 +347,7 @@
 			files = (
 				22E55849257239DA00998C86 /* XibViewController.m in Sources */,
 				22E557D92572347F00998C86 /* ViewController.m in Sources */,
+				2264007225728E1B00AC768B /* MasonryViewController.m in Sources */,
 				2263D0F22572643C00BA8590 /* Autolayout2ViewController.m in Sources */,
 				22E557D32572347F00998C86 /* AppDelegate.m in Sources */,
 				2264006E25727B5E00AC768B /* AutolayoutXibViewController.m in Sources */,
@@ -444,6 +500,7 @@
 		};
 		22E557FE2572348400998C86 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 709A7060D50B1096D0E01533 /* Pods-iOS-layout.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,6 +518,7 @@
 		};
 		22E557FF2572348400998C86 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FE832FCBEC4054B748C74B0 /* Pods-iOS-layout.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
