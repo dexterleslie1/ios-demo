@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AutolayoutXibViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7fN-Bz-9PD" userLabel="leftView">
+                    <rect key="frame" x="20" y="64" width="177" height="399"/>
+                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2c-cn-Es6" userLabel="bottomView">
+                    <rect key="frame" x="20" y="483" width="374" height="399"/>
+                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wMK-Pb-dll" userLabel="rightView">
+                    <rect key="frame" x="217" y="64" width="177" height="399"/>
+                    <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="w2c-cn-Es6" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" constant="-20" id="4Ty-Ew-8bY"/>
+                <constraint firstItem="wMK-Pb-dll" firstAttribute="leading" secondItem="7fN-Bz-9PD" secondAttribute="trailing" constant="20" id="6cr-FC-j5e"/>
+                <constraint firstItem="7fN-Bz-9PD" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="F9M-N7-nuz"/>
+                <constraint firstItem="wMK-Pb-dll" firstAttribute="width" secondItem="7fN-Bz-9PD" secondAttribute="width" id="QZf-zU-qV9"/>
+                <constraint firstItem="wMK-Pb-dll" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" constant="-20" id="R6K-nx-OQo"/>
+                <constraint firstItem="wMK-Pb-dll" firstAttribute="height" secondItem="7fN-Bz-9PD" secondAttribute="height" id="bft-Ny-8Cz"/>
+                <constraint firstItem="7fN-Bz-9PD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="cx3-I4-3pD"/>
+                <constraint firstItem="w2c-cn-Es6" firstAttribute="height" secondItem="7fN-Bz-9PD" secondAttribute="height" id="f2Y-au-MUj"/>
+                <constraint firstItem="w2c-cn-Es6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="hqf-Bb-vDR"/>
+                <constraint firstItem="w2c-cn-Es6" firstAttribute="top" secondItem="7fN-Bz-9PD" secondAttribute="bottom" constant="20" id="j7d-ol-nwv"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="w2c-cn-Es6" secondAttribute="bottom" constant="-20" id="j9h-ou-TJZ"/>
+                <constraint firstItem="wMK-Pb-dll" firstAttribute="top" secondItem="7fN-Bz-9PD" secondAttribute="top" id="rjY-GG-B45"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="131.8840579710145" y="126.5625"/>
+        </view>
+    </objects>
+</document>
