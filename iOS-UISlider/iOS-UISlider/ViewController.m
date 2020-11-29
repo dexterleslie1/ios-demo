@@ -21,6 +21,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    // 滑动结束时才触发一次value changed事件
+    self.slider.continuous = NO;
+    
     [self.slider addTarget:self
                     action:@selector(onValueChanged:)
           forControlEvents:UIControlEventValueChanged];
