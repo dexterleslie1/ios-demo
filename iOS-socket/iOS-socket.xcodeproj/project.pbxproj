@@ -15,6 +15,7 @@
 		2211078925665D620077FE98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2211078825665D620077FE98 /* main.m */; };
 		2211079325665D630077FE98 /* iOS_socketTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2211079225665D630077FE98 /* iOS_socketTests.m */; };
 		2211079E25665D630077FE98 /* iOS_socketUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2211079D25665D630077FE98 /* iOS_socketUITests.m */; };
+		2282D1A325846C62007614DD /* ConnectivityGCDAsyncSocketDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2282D1A225846C62007614DD /* ConnectivityGCDAsyncSocketDelegate.m */; };
 		22DAE249256A87C60041A653 /* ConnectivityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22DAE248256A87C60041A653 /* ConnectivityManager.m */; };
 		5DEFF2AF5D8F3F8C13190281 /* libPods-iOS-socket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A285AD43FEACACC595C8BA3 /* libPods-iOS-socket.a */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,8 @@
 		2211079925665D630077FE98 /* iOS-socketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-socketUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2211079D25665D630077FE98 /* iOS_socketUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_socketUITests.m; sourceTree = "<group>"; };
 		2211079F25665D630077FE98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2282D1A125846C62007614DD /* ConnectivityGCDAsyncSocketDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectivityGCDAsyncSocketDelegate.h; sourceTree = "<group>"; };
+		2282D1A225846C62007614DD /* ConnectivityGCDAsyncSocketDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectivityGCDAsyncSocketDelegate.m; sourceTree = "<group>"; };
 		22DAE247256A87C60041A653 /* ConnectivityManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConnectivityManager.h; sourceTree = "<group>"; };
 		22DAE248256A87C60041A653 /* ConnectivityManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConnectivityManager.m; sourceTree = "<group>"; };
 		353DA52F888895AE99B56553 /* Pods-iOS-socket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-socket.debug.xcconfig"; path = "Target Support Files/Pods-iOS-socket/Pods-iOS-socket.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				2211078825665D620077FE98 /* main.m */,
 				22DAE247256A87C60041A653 /* ConnectivityManager.h */,
 				22DAE248256A87C60041A653 /* ConnectivityManager.m */,
+				2282D1A125846C62007614DD /* ConnectivityGCDAsyncSocketDelegate.h */,
+				2282D1A225846C62007614DD /* ConnectivityGCDAsyncSocketDelegate.m */,
 			);
 			path = "iOS-socket";
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				2211077825665D5D0077FE98 /* AppDelegate.m in Sources */,
 				2211078925665D620077FE98 /* main.m in Sources */,
 				22DAE249256A87C60041A653 /* ConnectivityManager.m in Sources */,
+				2282D1A325846C62007614DD /* ConnectivityGCDAsyncSocketDelegate.m in Sources */,
 				2211077B25665D5D0077FE98 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
