@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		224CBE6425B3E7870047EBEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBE6325B3E7870047EBEF /* AppDelegate.m */; };
+		224CBE6725B3E7870047EBEF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBE6625B3E7870047EBEF /* SceneDelegate.m */; };
+		224CBE6A25B3E7870047EBEF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBE6925B3E7870047EBEF /* ViewController.m */; };
+		224CBE6D25B3E7870047EBEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224CBE6B25B3E7870047EBEF /* Main.storyboard */; };
+		224CBE7025B3E7870047EBEF /* iOS_coredata_migration_change_attribute_type.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 224CBE6E25B3E7870047EBEF /* iOS_coredata_migration_change_attribute_type.xcdatamodeld */; };
+		224CBE7225B3E78B0047EBEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224CBE7125B3E78B0047EBEF /* Assets.xcassets */; };
+		224CBE7525B3E78B0047EBEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224CBE7325B3E78B0047EBEF /* LaunchScreen.storyboard */; };
+		224CBE7825B3E78B0047EBEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBE7725B3E78B0047EBEF /* main.m */; };
+		224CBE8225B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBE8125B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeTests.m */; };
+		224CBE8D25B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBE8C25B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeUITests.m */; };
+		224CBEC125B3E81C0047EBEF /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBEC025B3E81C0047EBEF /* CoreDataManager.m */; };
+		224CBED825B3F0630047EBEF /* Person+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBED625B3F0630047EBEF /* Person+CoreDataClass.m */; };
+		224CBED925B3F0630047EBEF /* Person+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBED725B3F0630047EBEF /* Person+CoreDataProperties.m */; };
+		224CBEE625B3F3A70047EBEF /* DemoEntityMigrationPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 224CBEE525B3F3A70047EBEF /* DemoEntityMigrationPolicy.m */; };
+		224CBEEB25B3F3ED0047EBEF /* V1ToV2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 224CBEEA25B3F3ED0047EBEF /* V1ToV2.xcmappingmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		224CBE7E25B3E78B0047EBEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224CBE5725B3E7860047EBEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 224CBE5E25B3E7870047EBEF;
+			remoteInfo = "iOS-coredata-migration-change-attribute-type";
+		};
+		224CBE8925B3E78B0047EBEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 224CBE5725B3E7860047EBEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 224CBE5E25B3E7870047EBEF;
+			remoteInfo = "iOS-coredata-migration-change-attribute-type";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		224CBE5F25B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-coredata-migration-change-attribute-type.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		224CBE6225B3E7870047EBEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		224CBE6325B3E7870047EBEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		224CBE6525B3E7870047EBEF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		224CBE6625B3E7870047EBEF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		224CBE6825B3E7870047EBEF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		224CBE6925B3E7870047EBEF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		224CBE6C25B3E7870047EBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		224CBE6F25B3E7870047EBEF /* iOS_coredata_migration_change_attribute_type.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_coredata_migration_change_attribute_type.xcdatamodel; sourceTree = "<group>"; };
+		224CBE7125B3E78B0047EBEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		224CBE7425B3E78B0047EBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		224CBE7625B3E78B0047EBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224CBE7725B3E78B0047EBEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		224CBE7D25B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-coredata-migration-change-attribute-typeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		224CBE8125B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_coredata_migration_change_attribute_typeTests.m; sourceTree = "<group>"; };
+		224CBE8325B3E78B0047EBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224CBE8825B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-coredata-migration-change-attribute-typeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		224CBE8C25B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_coredata_migration_change_attribute_typeUITests.m; sourceTree = "<group>"; };
+		224CBE8E25B3E78B0047EBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		224CBEBF25B3E81C0047EBEF /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		224CBEC025B3E81C0047EBEF /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		224CBED425B3F0630047EBEF /* Person+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataProperties.h"; sourceTree = "<group>"; };
+		224CBED525B3F0630047EBEF /* Person+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Person+CoreDataClass.h"; sourceTree = "<group>"; };
+		224CBED625B3F0630047EBEF /* Person+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataClass.m"; sourceTree = "<group>"; };
+		224CBED725B3F0630047EBEF /* Person+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Person+CoreDataProperties.m"; sourceTree = "<group>"; };
+		224CBEE025B3F2B40047EBEF /* iOS_coredata_migration_change_attribute_type_v2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_coredata_migration_change_attribute_type_v2.xcdatamodel; sourceTree = "<group>"; };
+		224CBEE425B3F3A70047EBEF /* DemoEntityMigrationPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoEntityMigrationPolicy.h; sourceTree = "<group>"; };
+		224CBEE525B3F3A70047EBEF /* DemoEntityMigrationPolicy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoEntityMigrationPolicy.m; sourceTree = "<group>"; };
+		224CBEEA25B3F3ED0047EBEF /* V1ToV2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = V1ToV2.xcmappingmodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		224CBE5C25B3E7870047EBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224CBE7A25B3E78B0047EBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224CBE8525B3E78B0047EBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		224CBE5625B3E7860047EBEF = {
+			isa = PBXGroup;
+			children = (
+				224CBE6125B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type */,
+				224CBE8025B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeTests */,
+				224CBE8B25B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeUITests */,
+				224CBE6025B3E7870047EBEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		224CBE6025B3E7870047EBEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				224CBE5F25B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type.app */,
+				224CBE7D25B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeTests.xctest */,
+				224CBE8825B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		224CBE6125B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type */ = {
+			isa = PBXGroup;
+			children = (
+				224CBED425B3F0630047EBEF /* Person+CoreDataProperties.h */,
+				224CBED525B3F0630047EBEF /* Person+CoreDataClass.h */,
+				224CBED625B3F0630047EBEF /* Person+CoreDataClass.m */,
+				224CBED725B3F0630047EBEF /* Person+CoreDataProperties.m */,
+				224CBEBF25B3E81C0047EBEF /* CoreDataManager.h */,
+				224CBEC025B3E81C0047EBEF /* CoreDataManager.m */,
+				224CBE6225B3E7870047EBEF /* AppDelegate.h */,
+				224CBE6325B3E7870047EBEF /* AppDelegate.m */,
+				224CBE6525B3E7870047EBEF /* SceneDelegate.h */,
+				224CBE6625B3E7870047EBEF /* SceneDelegate.m */,
+				224CBE6825B3E7870047EBEF /* ViewController.h */,
+				224CBE6925B3E7870047EBEF /* ViewController.m */,
+				224CBE6B25B3E7870047EBEF /* Main.storyboard */,
+				224CBE7125B3E78B0047EBEF /* Assets.xcassets */,
+				224CBE7325B3E78B0047EBEF /* LaunchScreen.storyboard */,
+				224CBE7625B3E78B0047EBEF /* Info.plist */,
+				224CBE7725B3E78B0047EBEF /* main.m */,
+				224CBE6E25B3E7870047EBEF /* iOS_coredata_migration_change_attribute_type.xcdatamodeld */,
+				224CBEE425B3F3A70047EBEF /* DemoEntityMigrationPolicy.h */,
+				224CBEE525B3F3A70047EBEF /* DemoEntityMigrationPolicy.m */,
+				224CBEEA25B3F3ED0047EBEF /* V1ToV2.xcmappingmodel */,
+			);
+			path = "iOS-coredata-migration-change-attribute-type";
+			sourceTree = "<group>";
+		};
+		224CBE8025B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeTests */ = {
+			isa = PBXGroup;
+			children = (
+				224CBE8125B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeTests.m */,
+				224CBE8325B3E78B0047EBEF /* Info.plist */,
+			);
+			path = "iOS-coredata-migration-change-attribute-typeTests";
+			sourceTree = "<group>";
+		};
+		224CBE8B25B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				224CBE8C25B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeUITests.m */,
+				224CBE8E25B3E78B0047EBEF /* Info.plist */,
+			);
+			path = "iOS-coredata-migration-change-attribute-typeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		224CBE5E25B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224CBE9125B3E78B0047EBEF /* Build configuration list for PBXNativeTarget "iOS-coredata-migration-change-attribute-type" */;
+			buildPhases = (
+				224CBE5B25B3E7870047EBEF /* Sources */,
+				224CBE5C25B3E7870047EBEF /* Frameworks */,
+				224CBE5D25B3E7870047EBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-coredata-migration-change-attribute-type";
+			productName = "iOS-coredata-migration-change-attribute-type";
+			productReference = 224CBE5F25B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type.app */;
+			productType = "com.apple.product-type.application";
+		};
+		224CBE7C25B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224CBE9425B3E78B0047EBEF /* Build configuration list for PBXNativeTarget "iOS-coredata-migration-change-attribute-typeTests" */;
+			buildPhases = (
+				224CBE7925B3E78B0047EBEF /* Sources */,
+				224CBE7A25B3E78B0047EBEF /* Frameworks */,
+				224CBE7B25B3E78B0047EBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				224CBE7F25B3E78B0047EBEF /* PBXTargetDependency */,
+			);
+			name = "iOS-coredata-migration-change-attribute-typeTests";
+			productName = "iOS-coredata-migration-change-attribute-typeTests";
+			productReference = 224CBE7D25B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		224CBE8725B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224CBE9725B3E78B0047EBEF /* Build configuration list for PBXNativeTarget "iOS-coredata-migration-change-attribute-typeUITests" */;
+			buildPhases = (
+				224CBE8425B3E78B0047EBEF /* Sources */,
+				224CBE8525B3E78B0047EBEF /* Frameworks */,
+				224CBE8625B3E78B0047EBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				224CBE8A25B3E78B0047EBEF /* PBXTargetDependency */,
+			);
+			name = "iOS-coredata-migration-change-attribute-typeUITests";
+			productName = "iOS-coredata-migration-change-attribute-typeUITests";
+			productReference = 224CBE8825B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		224CBE5725B3E7860047EBEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					224CBE5E25B3E7870047EBEF = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					224CBE7C25B3E78B0047EBEF = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 224CBE5E25B3E7870047EBEF;
+					};
+					224CBE8725B3E78B0047EBEF = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 224CBE5E25B3E7870047EBEF;
+					};
+				};
+			};
+			buildConfigurationList = 224CBE5A25B3E7860047EBEF /* Build configuration list for PBXProject "iOS-coredata-migration-change-attribute-type" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 224CBE5625B3E7860047EBEF;
+			productRefGroup = 224CBE6025B3E7870047EBEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				224CBE5E25B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type */,
+				224CBE7C25B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeTests */,
+				224CBE8725B3E78B0047EBEF /* iOS-coredata-migration-change-attribute-typeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		224CBE5D25B3E7870047EBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224CBE7525B3E78B0047EBEF /* LaunchScreen.storyboard in Resources */,
+				224CBE7225B3E78B0047EBEF /* Assets.xcassets in Resources */,
+				224CBE6D25B3E7870047EBEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224CBE7B25B3E78B0047EBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224CBE8625B3E78B0047EBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		224CBE5B25B3E7870047EBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224CBED925B3F0630047EBEF /* Person+CoreDataProperties.m in Sources */,
+				224CBEC125B3E81C0047EBEF /* CoreDataManager.m in Sources */,
+				224CBEE625B3F3A70047EBEF /* DemoEntityMigrationPolicy.m in Sources */,
+				224CBE7825B3E78B0047EBEF /* main.m in Sources */,
+				224CBE7025B3E7870047EBEF /* iOS_coredata_migration_change_attribute_type.xcdatamodeld in Sources */,
+				224CBE6A25B3E7870047EBEF /* ViewController.m in Sources */,
+				224CBE6425B3E7870047EBEF /* AppDelegate.m in Sources */,
+				224CBED825B3F0630047EBEF /* Person+CoreDataClass.m in Sources */,
+				224CBE6725B3E7870047EBEF /* SceneDelegate.m in Sources */,
+				224CBEEB25B3F3ED0047EBEF /* V1ToV2.xcmappingmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224CBE7925B3E78B0047EBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224CBE8225B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		224CBE8425B3E78B0047EBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224CBE8D25B3E78B0047EBEF /* iOS_coredata_migration_change_attribute_typeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		224CBE7F25B3E78B0047EBEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 224CBE5E25B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type */;
+			targetProxy = 224CBE7E25B3E78B0047EBEF /* PBXContainerItemProxy */;
+		};
+		224CBE8A25B3E78B0047EBEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 224CBE5E25B3E7870047EBEF /* iOS-coredata-migration-change-attribute-type */;
+			targetProxy = 224CBE8925B3E78B0047EBEF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		224CBE6B25B3E7870047EBEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224CBE6C25B3E7870047EBEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		224CBE7325B3E78B0047EBEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224CBE7425B3E78B0047EBEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		224CBE8F25B3E78B0047EBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		224CBE9025B3E78B0047EBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		224CBE9225B3E78B0047EBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-coredata-migration-change-attribute-type/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-coredata-migration-change-attribute-type";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		224CBE9325B3E78B0047EBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-coredata-migration-change-attribute-type/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-coredata-migration-change-attribute-type";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		224CBE9525B3E78B0047EBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-coredata-migration-change-attribute-typeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-coredata-migration-change-attribute-typeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-coredata-migration-change-attribute-type.app/iOS-coredata-migration-change-attribute-type";
+			};
+			name = Debug;
+		};
+		224CBE9625B3E78B0047EBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-coredata-migration-change-attribute-typeTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-coredata-migration-change-attribute-typeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-coredata-migration-change-attribute-type.app/iOS-coredata-migration-change-attribute-type";
+			};
+			name = Release;
+		};
+		224CBE9825B3E78B0047EBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-coredata-migration-change-attribute-typeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-coredata-migration-change-attribute-typeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS-coredata-migration-change-attribute-type";
+			};
+			name = Debug;
+		};
+		224CBE9925B3E78B0047EBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-coredata-migration-change-attribute-typeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-coredata-migration-change-attribute-typeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS-coredata-migration-change-attribute-type";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		224CBE5A25B3E7860047EBEF /* Build configuration list for PBXProject "iOS-coredata-migration-change-attribute-type" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224CBE8F25B3E78B0047EBEF /* Debug */,
+				224CBE9025B3E78B0047EBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224CBE9125B3E78B0047EBEF /* Build configuration list for PBXNativeTarget "iOS-coredata-migration-change-attribute-type" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224CBE9225B3E78B0047EBEF /* Debug */,
+				224CBE9325B3E78B0047EBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224CBE9425B3E78B0047EBEF /* Build configuration list for PBXNativeTarget "iOS-coredata-migration-change-attribute-typeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224CBE9525B3E78B0047EBEF /* Debug */,
+				224CBE9625B3E78B0047EBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224CBE9725B3E78B0047EBEF /* Build configuration list for PBXNativeTarget "iOS-coredata-migration-change-attribute-typeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224CBE9825B3E78B0047EBEF /* Debug */,
+				224CBE9925B3E78B0047EBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		224CBE6E25B3E7870047EBEF /* iOS_coredata_migration_change_attribute_type.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				224CBEE025B3F2B40047EBEF /* iOS_coredata_migration_change_attribute_type_v2.xcdatamodel */,
+				224CBE6F25B3E7870047EBEF /* iOS_coredata_migration_change_attribute_type.xcdatamodel */,
+			);
+			currentVersion = 224CBEE025B3F2B40047EBEF /* iOS_coredata_migration_change_attribute_type_v2.xcdatamodel */;
+			path = iOS_coredata_migration_change_attribute_type.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 224CBE5725B3E7860047EBEF /* Project object */;
+}
