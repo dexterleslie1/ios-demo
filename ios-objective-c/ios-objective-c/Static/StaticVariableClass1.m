@@ -10,8 +10,9 @@
 
 @implementation StaticVariableClass1
 
+static NSNumber *counter = 0;
+
 + (NSNumber *) getStaticVariable {
-    static NSNumber *counter = 0;
     if(!counter) {
         NSLog(@"静态counter变量不存在，已经初始化一个新的静态counter变量");
     }
