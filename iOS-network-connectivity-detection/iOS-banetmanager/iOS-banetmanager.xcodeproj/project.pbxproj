@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22A4C3C726269A1700C6079F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4C3C626269A1700C6079F /* AppDelegate.m */; };
+		22A4C3CA26269A1700C6079F /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4C3C926269A1700C6079F /* SceneDelegate.m */; };
+		22A4C3CD26269A1700C6079F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4C3CC26269A1700C6079F /* ViewController.m */; };
+		22A4C3D026269A1700C6079F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A4C3CE26269A1700C6079F /* Main.storyboard */; };
+		22A4C3D326269A1700C6079F /* iOS_banetmanager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 22A4C3D126269A1700C6079F /* iOS_banetmanager.xcdatamodeld */; };
+		22A4C3D526269A1C00C6079F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A4C3D426269A1C00C6079F /* Assets.xcassets */; };
+		22A4C3D826269A1C00C6079F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A4C3D626269A1C00C6079F /* LaunchScreen.storyboard */; };
+		22A4C3DB26269A1C00C6079F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4C3DA26269A1C00C6079F /* main.m */; };
+		22A4C3E526269A1D00C6079F /* iOS_banetmanagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4C3E426269A1D00C6079F /* iOS_banetmanagerTests.m */; };
+		22A4C3F026269A1D00C6079F /* iOS_banetmanagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4C3EF26269A1D00C6079F /* iOS_banetmanagerUITests.m */; };
+		F590457F7F26511DFD5AE50E /* libPods-iOS-banetmanager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B536C1BE4EC5D2AA4FBC24F0 /* libPods-iOS-banetmanager.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22A4C3E126269A1D00C6079F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A4C3BA26269A1700C6079F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A4C3C126269A1700C6079F;
+			remoteInfo = "iOS-banetmanager";
+		};
+		22A4C3EC26269A1D00C6079F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A4C3BA26269A1700C6079F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22A4C3C126269A1700C6079F;
+			remoteInfo = "iOS-banetmanager";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17C9B72D97885AF9AE1B6536 /* Pods-iOS-banetmanager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-banetmanager.debug.xcconfig"; path = "Target Support Files/Pods-iOS-banetmanager/Pods-iOS-banetmanager.debug.xcconfig"; sourceTree = "<group>"; };
+		22A4C3C226269A1700C6079F /* iOS-banetmanager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-banetmanager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A4C3C526269A1700C6079F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		22A4C3C626269A1700C6079F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		22A4C3C826269A1700C6079F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		22A4C3C926269A1700C6079F /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		22A4C3CB26269A1700C6079F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		22A4C3CC26269A1700C6079F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		22A4C3CF26269A1700C6079F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22A4C3D226269A1700C6079F /* iOS_banetmanager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_banetmanager.xcdatamodel; sourceTree = "<group>"; };
+		22A4C3D426269A1C00C6079F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22A4C3D726269A1C00C6079F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22A4C3D926269A1C00C6079F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A4C3DA26269A1C00C6079F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22A4C3E026269A1D00C6079F /* iOS-banetmanagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-banetmanagerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A4C3E426269A1D00C6079F /* iOS_banetmanagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_banetmanagerTests.m; sourceTree = "<group>"; };
+		22A4C3E626269A1D00C6079F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A4C3EB26269A1D00C6079F /* iOS-banetmanagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-banetmanagerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		22A4C3EF26269A1D00C6079F /* iOS_banetmanagerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_banetmanagerUITests.m; sourceTree = "<group>"; };
+		22A4C3F126269A1D00C6079F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		823A9CA2B601791E628C5C17 /* Pods-iOS-banetmanager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-banetmanager.release.xcconfig"; path = "Target Support Files/Pods-iOS-banetmanager/Pods-iOS-banetmanager.release.xcconfig"; sourceTree = "<group>"; };
+		B536C1BE4EC5D2AA4FBC24F0 /* libPods-iOS-banetmanager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-banetmanager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22A4C3BF26269A1700C6079F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F590457F7F26511DFD5AE50E /* libPods-iOS-banetmanager.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A4C3DD26269A1D00C6079F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A4C3E826269A1D00C6079F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22A4C3B926269A1700C6079F = {
+			isa = PBXGroup;
+			children = (
+				22A4C3C426269A1700C6079F /* iOS-banetmanager */,
+				22A4C3E326269A1D00C6079F /* iOS-banetmanagerTests */,
+				22A4C3EE26269A1D00C6079F /* iOS-banetmanagerUITests */,
+				22A4C3C326269A1700C6079F /* Products */,
+				CFAA15072AD1645558525D8F /* Pods */,
+				7DE283097DAA573A56D92D88 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22A4C3C326269A1700C6079F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22A4C3C226269A1700C6079F /* iOS-banetmanager.app */,
+				22A4C3E026269A1D00C6079F /* iOS-banetmanagerTests.xctest */,
+				22A4C3EB26269A1D00C6079F /* iOS-banetmanagerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22A4C3C426269A1700C6079F /* iOS-banetmanager */ = {
+			isa = PBXGroup;
+			children = (
+				22A4C3C526269A1700C6079F /* AppDelegate.h */,
+				22A4C3C626269A1700C6079F /* AppDelegate.m */,
+				22A4C3C826269A1700C6079F /* SceneDelegate.h */,
+				22A4C3C926269A1700C6079F /* SceneDelegate.m */,
+				22A4C3CB26269A1700C6079F /* ViewController.h */,
+				22A4C3CC26269A1700C6079F /* ViewController.m */,
+				22A4C3CE26269A1700C6079F /* Main.storyboard */,
+				22A4C3D426269A1C00C6079F /* Assets.xcassets */,
+				22A4C3D626269A1C00C6079F /* LaunchScreen.storyboard */,
+				22A4C3D926269A1C00C6079F /* Info.plist */,
+				22A4C3DA26269A1C00C6079F /* main.m */,
+				22A4C3D126269A1700C6079F /* iOS_banetmanager.xcdatamodeld */,
+			);
+			path = "iOS-banetmanager";
+			sourceTree = "<group>";
+		};
+		22A4C3E326269A1D00C6079F /* iOS-banetmanagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				22A4C3E426269A1D00C6079F /* iOS_banetmanagerTests.m */,
+				22A4C3E626269A1D00C6079F /* Info.plist */,
+			);
+			path = "iOS-banetmanagerTests";
+			sourceTree = "<group>";
+		};
+		22A4C3EE26269A1D00C6079F /* iOS-banetmanagerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				22A4C3EF26269A1D00C6079F /* iOS_banetmanagerUITests.m */,
+				22A4C3F126269A1D00C6079F /* Info.plist */,
+			);
+			path = "iOS-banetmanagerUITests";
+			sourceTree = "<group>";
+		};
+		7DE283097DAA573A56D92D88 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B536C1BE4EC5D2AA4FBC24F0 /* libPods-iOS-banetmanager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CFAA15072AD1645558525D8F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17C9B72D97885AF9AE1B6536 /* Pods-iOS-banetmanager.debug.xcconfig */,
+				823A9CA2B601791E628C5C17 /* Pods-iOS-banetmanager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22A4C3C126269A1700C6079F /* iOS-banetmanager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A4C3F426269A1D00C6079F /* Build configuration list for PBXNativeTarget "iOS-banetmanager" */;
+			buildPhases = (
+				495BECC5FBF81185F98552BD /* [CP] Check Pods Manifest.lock */,
+				22A4C3BE26269A1700C6079F /* Sources */,
+				22A4C3BF26269A1700C6079F /* Frameworks */,
+				22A4C3C026269A1700C6079F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-banetmanager";
+			productName = "iOS-banetmanager";
+			productReference = 22A4C3C226269A1700C6079F /* iOS-banetmanager.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22A4C3DF26269A1D00C6079F /* iOS-banetmanagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A4C3F726269A1D00C6079F /* Build configuration list for PBXNativeTarget "iOS-banetmanagerTests" */;
+			buildPhases = (
+				22A4C3DC26269A1D00C6079F /* Sources */,
+				22A4C3DD26269A1D00C6079F /* Frameworks */,
+				22A4C3DE26269A1D00C6079F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22A4C3E226269A1D00C6079F /* PBXTargetDependency */,
+			);
+			name = "iOS-banetmanagerTests";
+			productName = "iOS-banetmanagerTests";
+			productReference = 22A4C3E026269A1D00C6079F /* iOS-banetmanagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22A4C3EA26269A1D00C6079F /* iOS-banetmanagerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A4C3FA26269A1D00C6079F /* Build configuration list for PBXNativeTarget "iOS-banetmanagerUITests" */;
+			buildPhases = (
+				22A4C3E726269A1D00C6079F /* Sources */,
+				22A4C3E826269A1D00C6079F /* Frameworks */,
+				22A4C3E926269A1D00C6079F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22A4C3ED26269A1D00C6079F /* PBXTargetDependency */,
+			);
+			name = "iOS-banetmanagerUITests";
+			productName = "iOS-banetmanagerUITests";
+			productReference = 22A4C3EB26269A1D00C6079F /* iOS-banetmanagerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22A4C3BA26269A1700C6079F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					22A4C3C126269A1700C6079F = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					22A4C3DF26269A1D00C6079F = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 22A4C3C126269A1700C6079F;
+					};
+					22A4C3EA26269A1D00C6079F = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 22A4C3C126269A1700C6079F;
+					};
+				};
+			};
+			buildConfigurationList = 22A4C3BD26269A1700C6079F /* Build configuration list for PBXProject "iOS-banetmanager" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22A4C3B926269A1700C6079F;
+			productRefGroup = 22A4C3C326269A1700C6079F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22A4C3C126269A1700C6079F /* iOS-banetmanager */,
+				22A4C3DF26269A1D00C6079F /* iOS-banetmanagerTests */,
+				22A4C3EA26269A1D00C6079F /* iOS-banetmanagerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22A4C3C026269A1700C6079F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A4C3D826269A1C00C6079F /* LaunchScreen.storyboard in Resources */,
+				22A4C3D526269A1C00C6079F /* Assets.xcassets in Resources */,
+				22A4C3D026269A1700C6079F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A4C3DE26269A1D00C6079F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A4C3E926269A1D00C6079F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		495BECC5FBF81185F98552BD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS-banetmanager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22A4C3BE26269A1700C6079F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A4C3DB26269A1C00C6079F /* main.m in Sources */,
+				22A4C3D326269A1700C6079F /* iOS_banetmanager.xcdatamodeld in Sources */,
+				22A4C3CD26269A1700C6079F /* ViewController.m in Sources */,
+				22A4C3C726269A1700C6079F /* AppDelegate.m in Sources */,
+				22A4C3CA26269A1700C6079F /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A4C3DC26269A1D00C6079F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A4C3E526269A1D00C6079F /* iOS_banetmanagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22A4C3E726269A1D00C6079F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22A4C3F026269A1D00C6079F /* iOS_banetmanagerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22A4C3E226269A1D00C6079F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A4C3C126269A1700C6079F /* iOS-banetmanager */;
+			targetProxy = 22A4C3E126269A1D00C6079F /* PBXContainerItemProxy */;
+		};
+		22A4C3ED26269A1D00C6079F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22A4C3C126269A1700C6079F /* iOS-banetmanager */;
+			targetProxy = 22A4C3EC26269A1D00C6079F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22A4C3CE26269A1700C6079F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22A4C3CF26269A1700C6079F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		22A4C3D626269A1C00C6079F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22A4C3D726269A1C00C6079F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22A4C3F226269A1D00C6079F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		22A4C3F326269A1D00C6079F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22A4C3F526269A1D00C6079F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C9B72D97885AF9AE1B6536 /* Pods-iOS-banetmanager.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-banetmanager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-banetmanager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22A4C3F626269A1D00C6079F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 823A9CA2B601791E628C5C17 /* Pods-iOS-banetmanager.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-banetmanager/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-banetmanager";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		22A4C3F826269A1D00C6079F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-banetmanagerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-banetmanagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-banetmanager.app/iOS-banetmanager";
+			};
+			name = Debug;
+		};
+		22A4C3F926269A1D00C6079F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-banetmanagerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-banetmanagerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOS-banetmanager.app/iOS-banetmanager";
+			};
+			name = Release;
+		};
+		22A4C3FB26269A1D00C6079F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-banetmanagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-banetmanagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS-banetmanager";
+			};
+			name = Debug;
+		};
+		22A4C3FC26269A1D00C6079F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TFB3629HAF;
+				INFOPLIST_FILE = "iOS-banetmanagerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.future.demo.iOS.iOS-banetmanagerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iOS-banetmanager";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22A4C3BD26269A1700C6079F /* Build configuration list for PBXProject "iOS-banetmanager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A4C3F226269A1D00C6079F /* Debug */,
+				22A4C3F326269A1D00C6079F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A4C3F426269A1D00C6079F /* Build configuration list for PBXNativeTarget "iOS-banetmanager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A4C3F526269A1D00C6079F /* Debug */,
+				22A4C3F626269A1D00C6079F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A4C3F726269A1D00C6079F /* Build configuration list for PBXNativeTarget "iOS-banetmanagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A4C3F826269A1D00C6079F /* Debug */,
+				22A4C3F926269A1D00C6079F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A4C3FA26269A1D00C6079F /* Build configuration list for PBXNativeTarget "iOS-banetmanagerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22A4C3FB26269A1D00C6079F /* Debug */,
+				22A4C3FC26269A1D00C6079F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		22A4C3D126269A1700C6079F /* iOS_banetmanager.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				22A4C3D226269A1700C6079F /* iOS_banetmanager.xcdatamodel */,
+			);
+			currentVersion = 22A4C3D226269A1700C6079F /* iOS_banetmanager.xcdatamodel */;
+			path = iOS_banetmanager.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 22A4C3BA26269A1700C6079F /* Project object */;
+}
